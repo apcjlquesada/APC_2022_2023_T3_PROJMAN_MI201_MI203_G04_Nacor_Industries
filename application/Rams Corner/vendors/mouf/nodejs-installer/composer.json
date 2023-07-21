@@ -1,0 +1,47 @@
+{
+    "name": "mouf/nodejs-installer",
+    "type": "composer-plugin",
+    "description": "An installer package that let's you install NodeJS and NPM as a Composer dependency.",
+    "keywords": ["installer", "nodejs", "npm"],
+    "homepage": "http://mouf-php.com/packages/mouf/nodejs-installer",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "David Négrier",
+            "email": "d.negrier@thecodingmachine.com",
+            "homepage": "http://mouf-php.com"
+        }
+    ],
+    "require": {
+    	"php": ">=5.3.0",
+        "composer-plugin-api": "^1.0 || ^2.0",
+        "ext-openssl": "*"
+    },
+    "require-dev": {
+        "composer/composer": "^1.7",
+        "phpunit/phpunit": "^7.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "Mouf\\NodeJsInstaller\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Mouf\\NodeJsInstaller\\": "tests/"
+        }
+    },
+    "extra" : {
+    	"class": ["Mouf\\NodeJsInstaller\\NodeJsPlugin"],
+	    "mouf": {
+		      "logo": "node-js.png"
+	    }
+    },
+    "scripts": {
+        "test": [
+            "phpunit"
+        ]
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
