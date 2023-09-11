@@ -24,6 +24,16 @@ class KB extends Controller
 
 
         }
+
+        if($admin->u_role != "Admin"){
+            Alert::warning('Warning!!!', 'Unauthorized Access!');
+            if($admin->u_role == "Staff"){
+                return redirect()->route('staffHome');
+            }else{
+                return redirect()->route('clientHome');
+            }
+        }
+
         $user_info = Reporter::where('u_ID', $admin->u_ID)->get();
         $kb_info = k_b_s::get();
 
@@ -54,6 +64,16 @@ class KB extends Controller
 
 
         }
+
+
+        if($client->u_role != "Client"){
+            Alert::warning('Warning!!!', 'Unauthorized Access!');
+            if($client->u_role == "Staff"){
+                return redirect()->route('staffHome');
+            }else{
+                return redirect()->route('adminHome');
+            }
+        }
         $user_info = Reporter::where('u_ID', $client->u_ID)->get();
         $kb_info = k_b_s::where('kb_approved', 1)
                         ->where('kb_view', 1)
@@ -70,6 +90,15 @@ class KB extends Controller
             return redirect()->route('loginPage');
 
 
+        }
+
+        if($staff->u_role != "Staff"){
+            Alert::warning('Warning!!!', 'Unauthorized Access!');
+            if($staff->u_role == "Admin"){
+                return redirect()->route('adminHome');
+            }else{
+                return redirect()->route('clientHome');
+            }
         }
         $user_info = Reporter::where('u_ID', $staff->u_ID)->get();
         $kb_info = k_b_s::where('kb_approved', 1)->get();
@@ -135,6 +164,15 @@ class KB extends Controller
             return redirect()->route('loginPage');
         }
 
+        if($admin->u_role != "Admin"){
+            Alert::warning('Warning!!!', 'Unauthorized Access!');
+            if($admin->u_role == "Staff"){
+                return redirect()->route('staffHome');
+            }else{
+                return redirect()->route('clientHome');
+            }
+        }
+
         $user_info = Reporter::where('u_ID', $admin->u_ID)->get();
         $kb_info = k_b_s::where('kb_ID', $kid)->get()->first();
 
@@ -163,6 +201,15 @@ class KB extends Controller
 
 
         }
+
+        if($staff->u_role != "Staff"){
+            Alert::warning('Warning!!!', 'Unauthorized Access!');
+            if($staff->u_role == "Admin"){
+                return redirect()->route('adminHome');
+            }else{
+                return redirect()->route('clientHome');
+            }
+        }
         $user_info = Reporter::where('u_ID', $staff->u_ID)->get();
         $kb_info = k_b_s::where('kb_ID', $id)->get()->first();
         if($kb_info->kb_approved == 1){
@@ -184,6 +231,15 @@ class KB extends Controller
             return redirect()->route('loginPage');
 
 
+        }
+
+        if($client->u_role != "Client"){
+            Alert::warning('Warning!!!', 'Unauthorized Access!');
+            if($client->u_role == "Staff"){
+                return redirect()->route('staffHome');
+            }else{
+                return redirect()->route('adminHome');
+            }
         }
         $user_info = Reporter::where('u_ID', $client->u_ID)->get();
         $kb_info = k_b_s::where('kb_ID', $id)->get()->first();
