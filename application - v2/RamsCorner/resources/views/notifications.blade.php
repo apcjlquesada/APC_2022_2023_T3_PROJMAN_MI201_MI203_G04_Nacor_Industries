@@ -17,7 +17,7 @@
                 <ul class="list" style="background-color: #cbecff; padding:0.5%">
                     <div class="list-item-content">
                         @if ($user->u_role == 'Admin' || $user->u_role == 'Staff')
-                            <a href="/openTicketByNotif/{{ $notify->nID }}" style="color:black; text-decoration:none">
+                            <a href="openTicketByNotif/{{ $notify->nID }}" style="color:black; text-decoration:none">
                                 <li class="list-group-item active">
                                     <div class=row>
                                         <div class="col-6">
@@ -81,7 +81,7 @@
                 <ul class="list" style="background-color: #ffffff;">
                     <div class="list-item-content">
                         @if ($user->u_role == 'Admin' || $user->u_role == 'Staff')
-                            <a href="/openTicketByNotif/{{ $notify->nID }}" style="color:black; text-decoration:none">
+                            <a href="openTicketByNotif/{{ $notify->nID }}" style="color:black; text-decoration:none">
                                 <li class="list-group-item active">
                                     <div class=row>
                                         <div class="col-6">

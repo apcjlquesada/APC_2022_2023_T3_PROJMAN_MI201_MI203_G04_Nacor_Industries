@@ -112,7 +112,7 @@
             <div>
                 @foreach ($unapproved as $kb_info)
                     <div class=" {{ $kb_info->kb_category }} kbs-content">
-                        <a href="/adminkbView/{{ $kb_info->kb_ID }}" class="card content {{ $kb_info->kb_category }}"
+                        <a href="adminkbView/{{ $kb_info->kb_ID }}" class="card content {{ $kb_info->kb_category }}"
                             id="content clickable"
                             style="margin: 1%; cursor: pointer; text-decoration:  none; color: black;">
                             <div class="card-header">
@@ -138,7 +138,7 @@
             <div>
                 @foreach ($approved as $kb_info)
                     <div class=" {{ $kb_info->kb_category }} kbs-content">
-                        <a href="/adminkbView/{{ $kb_info->kb_ID }}" class="card content {{ $kb_info->kb_category }}"
+                        <a href="adminkbView/{{ $kb_info->kb_ID }}" class="card content {{ $kb_info->kb_category }}"
                             id="content clickable"
                             style="margin: 1%; cursor: pointer; text-decoration:  none; color: black;">
                             <div class="card-header">
