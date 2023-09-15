@@ -25,6 +25,7 @@
     style="background-image: url('{{ asset('images/loginBackground.png') }}');
              background-size: cover;
              background-position: center center;
+             background-repeat:no-repeat;
              margin: 0;
              padding: 0;
              min-height: 100vh;
