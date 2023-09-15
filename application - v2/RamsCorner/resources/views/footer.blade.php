@@ -1,19 +1,17 @@
 <div class="footer"
     style="position: fixed;
         bottom: 0;
-        width: 200vmax;
+        width: 100%;
         height: 30px;
         background-color: #e3ad43;
         color: #fff;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-left:-300px">
-    <p style="margin-left:-400px;margin-top:7px; text-align: right;">Copyright © 2023 Asia Pacific College | Nacor
-        Industries. All
-        rights
-        reserved.</p>
+        text-align: center;
+    ">
+    <p style="margin-top: 2px;">
+        Copyright © 2023 Asia Pacific College | Nacor Industries. All rights reserved.
+    </p>
 </div>
+
 
 </body>
 <!-- bootstrap -->
