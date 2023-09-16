@@ -466,7 +466,7 @@
         });
 
         button.addEventListener("click", function() {
-            window.location.href = ('/loginPage');
+            window.location.href = ('loginPage');
         });
     </script>
 </body>
