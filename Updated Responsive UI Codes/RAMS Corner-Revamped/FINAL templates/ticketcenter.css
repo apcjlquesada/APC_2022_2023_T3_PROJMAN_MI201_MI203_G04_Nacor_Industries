@@ -5,10 +5,12 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
+
 body {
   min-height: 100vh;
   width: 100%;
 }
+
 .sidebar {
   position: fixed;
   height: 100%;
@@ -21,6 +23,10 @@ body {
 .sidebar.active {
   width: 300px;
 }
+
+/* .sidebar .logo-details {
+  align-items: center;
+} */
 .sidebar .logo-details .profile img {
   width: 40px;
   height: 40px;
@@ -55,8 +61,9 @@ body {
   align-items: center;
   text-decoration: none;
   transition: all 0.4s ease;
-  border-radius: 30%;
+  border-radius: 50px;
 }
+
 .sidebar .nav-links li a:hover {
   background: #05e0e9;
   width: 100%;
@@ -83,6 +90,8 @@ body {
   width: 100%;
   transition: all 0.5ms ease;
 }
+
+/* dashboard */
 .home-section {
   /* z-index: 2; */
   background: #f6f7fb;
@@ -141,6 +150,44 @@ body {
 }
 
 /* edit dashboard contents here */
-.dash-contents{
-    text-align: center;
+.dash-contents {
+  /* text-align: center; */
+}
+
+.dash-contents .dash-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.dash-contents .dash-container .tic-filters {
+  margin: 10px;
+  font-size: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  max-height: 75vh;
+}
+
+.dash-contents .dash-container .tic-filters .head {
+  display: flex;
+  justify-content: space-between;
+}
+.dash-contents .dash-container .ticket-lists {
+  overflow-y: auto;
+  margin: 10px;
+  padding: 30px;
+  font-size: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  max-height: 75vh;
+  grid-column: span 3;
+}
+
+
+@media (max-width: 1000px) {
+  .dash-contents .dash-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .home-section {
+    min-height: 150vh;
+  }
 }
