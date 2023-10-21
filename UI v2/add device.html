@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<!---Coding By CodingLab | www.codinglabweb.com--->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Add Devices | RAMS Corner</title>
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+        <!---internal CSS--->
+<style>
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: #817e9d;
+}
+.container {
+  position: relative;
+  max-width: 700px;
+  width: 100%;
+  background: #fff;
+  padding: 25px;
+  border-radius: 25px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.container .title{
+    font-size: 27px;
+    font-weight: bold;
+    position: relative;
+    color: #242934;
+}
+/* title highlight */
+.container .title::before{ 
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 57px;
+    background: linear-gradient(135deg, #6644a8, #05e0e9)
+}
+/* .container header { 
+  font-size: 1.5rem;
+  color: #333;
+  font-weight: 500;
+  text-align: center;
+} */
+
+.container .form {
+  margin-top: 30px;
+}
+.form .input-box {
+  width: 100%;
+  margin-top: 20px;
+}
+.input-box label {
+  color: #333;
+}
+.form :where(.input-box input, .select-box) {
+  position: relative;
+  height: 50px;
+  width: 100%;
+  outline: none;
+  font-size: 1rem;
+  color: #817e9d;
+  margin-top: 8px;
+  border: 1px solid #ddd;
+  border-radius: 25px;
+  padding: 0 15px;
+}
+.input-box input:focus {
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+}
+.form .column {
+  display: flex;
+  column-gap: 15px;
+}
+.form .device-type{
+  margin-top: 20px;
+}
+/*
+.device-box h3 {
+  color: #817e9d;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 8px;
+}*/
+
+.form :where(.device-option, .device) {
+  display: flex;
+  align-items: center;
+  column-gap: 50px;
+  flex-wrap: wrap;
+}
+.form .device {
+  column-gap: 5px;
+}
+.device input {
+  accent-color: #817e9d;
+}
+.form :where(.device input, .device label) {
+  cursor: pointer;
+}
+.device label {
+  color: #707070;
+}
+.address :where(input, .select-box) {
+  margin-top: 15px;
+}
+.select-box select {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  border: none;
+  color: #707070;
+  font-size: 1rem;
+}
+.form button {
+  height: 55px;
+  width: 100%;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-top: 30px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: #6644a8;
+}
+.form button:hover {
+  background: #05e0e9;
+}
+/*Responsive*/
+@media screen and (max-width: 500px) {
+  .form .column {
+    flex-wrap: wrap;
+  }
+  .form :where(.device-option, .device) {
+    row-gap: 15px;
+  }
+}
+
+</style>
+
+<!-- Hi Ruth -->
+
+  </head>
+  <body>
+    <section class="container">
+      <div class="title">Add Devices</div>
+      <form action="#" class="form">
+        <div class="input-box">
+          <label>Device ID</label>
+          <input type="text" placeholder="Enter Device ID" required />
+        </div>
+
+        <div class="input-box">
+          <label>Device Name</label>
+          <input type="text" placeholder="Enter Device Name" required />
+        </div>
+
+        <div class="column">
+          <div class="input-box">
+            <label>Inventory Number</label>
+            <input type="number" placeholder="Enter Inventory number" required />
+          </div>
+          <div class="input-box">
+            <label>Purchase Date</label>
+            <input type="date" placeholder="Enter purchase date" required />
+          </div>
+        </div>
+        <div class="device-type">
+          <label>Device Type</label>
+          <div class="device-option">
+            <div class="device">
+              <input type="radio" id="check-computing" name="device" checked />
+              <label for="check-computing">Computing</label>
+            </div>
+            <div class="device">
+              <input type="radio" id="check-networking" name="device" />
+              <label for="check-networking">Networking</label>
+            </div>
+            <div class="device">
+              <input type="radio" id="check-av" name="device" />
+              <label for="check-av">Audio/Visual</label>
+            </div>
+            <div class="device">
+              <input type="radio" id="check-utilities" name="device" />
+              <label for="check-utilities">Utility</label>
+            </div>
+          </div>
+        </div>
+        <div class="input-box designation">
+          <label>Device Assignment</label>
+          <div class="column">
+            <div class="select-box">
+              <select>
+                <option hidden>Floor</option>
+                <option>1st floor</option>
+                <option>2nd floor</option>
+                <option>3rd floor</option>
+                <option>4th floor</option>
+                <option>5th floor</option>
+                <option>6th floor</option>
+                <option>7th floor</option>
+                <option>8th floor</option>
+                <option>9th floor</option>
+                <option>10th floor</option>
+                <option>11th floor</option>
+                <option>12th floor</option>
+              </select>
+            </div>
+            <input type="number" placeholder="Room Number" required />
+          </div>
+        </div>
+        <button>Submit</button>
+      </form>
+    </section>
+  </body>
+</html>

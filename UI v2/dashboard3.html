@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ADMIN | Ram's Corner</title>
+    <link rel="stylesheet" href="dashboard3.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <!-- bootstrap link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <!-- sidebar -->
+    <div class="sidebar">
+      <div class="logo-details">
+        <center class="profile">
+          <img src="/resources/APCLogo.png" alt="">
+          <!-- <p>Nacor Industries</p> -->
+        </center>
+      </div>
+      <ul class="nav-links" style="padding: 0;">
+        <li>
+          <a href="dashboard3.html">
+            <i class="bi bi-columns-gap"></i>
+            <span class="link_name">Dashboard</span>
+          </a>
+        </li>
+        <li>
+          <a href="ticketcenter.html">
+            <i class="bi bi-ticket-perforated"></i>
+            <span class="link_name">Tickets</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="bi bi-lightbulb"></i>
+            <span class="link_name">Knowledge Base</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="bi bi-bar-chart"></i>
+            <span class="link_name">Reports</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="bi bi-tags"></i>
+            <span class="link_name">Tags</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="bi bi-pc-display"></i>
+            <span class="link_name">Personal Tickets</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- header/contents -->
+    <section class="home-section">
+        <nav>
+            <div class="sidebar-button">
+                <i class="bi bi-list sidebarBtn"></i>
+                <!-- <span class="dashboard">Rams Corner</span> -->
+            </div>
+            <div class="profile-details">
+              
+                  <div class="dropdown1">
+                    <i class="bi bi-bell" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
+                    <ul class="dropdown-menu" style="">
+                      <li><span class="dropdown-item-text">Notifications</span></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="#">Notifications  1</a></li>
+                      <li><a class="dropdown-item" href="#">Notifications 2</a></li>
+                    </ul>
+                  </div>
+
+                  <div class="dropdown2">
+                    <i class="bi bi-person-circle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
+                    
+                      <ul class="dropdown-menu" style="">
+                        <li><a class="dropdown-item" href="#">Sign out</a></li>
+                      </ul>
+                    </div>
+            </div>
+        </nav>
+
+        <div class="home-contents">
+          <div class="dashboard-boxes"></div>
+            <div class="title mb-5">
+              <h1>Admin Dashboard</h1>
+              <i class="bi bi-calendar2  me-4"> October 01, 2023 - October 31, 2023</i>
+            </div>
+
+            <div class="dash-contents">
+              <div class="charts">
+                <div class="card-body">
+                  <div class="row pt-4">
+                    <div class="col">
+                      <h3 class="card-title ps-3">Ticket Summary</h3>
+                    </div>
+                    <div class="col">
+                      <span class="card-subtitle mb-2 text-body-secondary text-end">
+                        <div class="dropstart pe-5">
+                          <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Sort by:
+                          </button>
+                          <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Daily</a></li>
+                            <li><a class="dropdown-item" href="#">Weekly</a></li>
+                            <li><a class="dropdown-item" href="#">Monthly</a></li>
+                          </ul>
+                        </div>
+                      </span>
+                    </div>
+                  </div>
+                  <p class="card-text">
+                    <div class="embed-responsive embed-responsive-16by9">
+                      <div id="chart_div" style="width: 100%; height: 500px;"></div>
+                    </div>
+                  </p>
+                  <div class="text-center">
+                    <i href="#" class="card-link">Software</i>
+                    <i href="#" class="card-link">Hardware</i>
+                    <i href="#" class="card-link">Resolved</i>
+                  </div>
+                </div>
+              </div>
+              <div class="">
+                <div class="grid-stats">
+                  <div class="items" style=" border-top:50px solid #75D481">69
+                    <h6>Opened TIckets</h6>
+                  </div>
+                  <div class="items" style=" border-top:50px solid #6257E3">420
+                    <h6>Opened TIckets</h6>
+                  </div>
+                  <div class="items" style=" border-top:50px solid #EEF8EB">69
+                    <h6>Opened TIckets</h6>
+                  </div>
+                  <div class="items" style=" border-top:50px solid #8F5D46">12
+                    <h6>Opened TIckets</h6>
+                  </div>
+                  <div class="items" style=" border-top:50px solid #05E0E9">12
+                    <h6>Opened TIckets</h6>
+                  </div>
+                  <div class="items" style=" border-top:50px solid #E0DFD8">54
+                    <h6>Opened TIckets</h6>
+                  </div>
+                </div>
+                <div class="KB" type="button">
+                  <div>
+                    <p>Create KB Article</p>
+                    <p>Let the users know about shit that matters at ipakita mo kung sino ka</p>
+                  </div>
+                  <div style="font-size: 60px; margin-right: 10%;">
+                    <i class="bi bi-lightbulb"></i>
+                  </div>
+                </div>
+              </div>
+              <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+              <script type="text/javascript">
+                google.charts.load('current', {'packages':['corechart']});
+                google.charts.setOnLoadCallback(drawChart);
+          
+                function drawChart() {
+                  var data = google.visualization.arrayToDataTable([
+                    ['Year', 'Sales', 'Expenses'],
+                    ['2013',  1000,      400],
+                    ['2014',  1170,      460],
+                    ['2015',  660,       1120],
+                    ['2016',  1030,      540]
+                  ]);
+          
+                  var options = {
+                    title: 'Company Performance',
+                    hAxis: {title: 'Year',  titleTextStyle: {color: '#333'}},
+                    vAxis: {minValue: 0}
+                  };
+          
+                  var chart = new google.visualization.AreaChart(document.getElementById('chart_div'));
+                  chart.draw(data, options);
+                }
+              </script>
+            </div>
+        </div>
+
+    </section>
+    
+
+    <!-- sidebar button script -->
+    <script>
+        let sidebar = document.querySelector(".sidebar");
+        let sidebarBtn = document.querySelector(".sidebarBtn");
+
+        sidebarBtn.onclick = function() {
+            sidebar.classList.toggle("active");
+        }
+    </script>
+
+  </body>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script> -->
+  <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script> -->
+  </html>
