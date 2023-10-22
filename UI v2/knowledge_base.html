@@ -105,53 +105,150 @@
                     <hr>
                     <div class="kb-btns">
                         <div class="d-grid gap-4 col-10 mx-auto m-5">
-                            <button class="btn btn-lg" type="button">All</button>
-                            <button class="btn btn-lg" type="button">Approved</button>
-                            <button class="btn btn-lg" type="button">Rejected</button>
-                            <button class="btn btn-lg" type="button">Pending</button>
+                            <button class="btn btn-primary btn-lg" type="button">All</button>
+                            <button class="btn btn-primary btn-lg" type="button">Approved</button>
+                            <button class="btn btn-primary btn-lg" type="button">Rejected</button>
+                            <button class="btn btn-primary btn-lg" type="button">Pending</button>
                         </div>
                     </div>
                 </div>
                 <div class="kb-list">
-                    <div class="lists">
+                  <div class="card kb-list">
+                    <div class="card-body p-0">
+                      <div class="lists">
                         <table class="table table-striped">
-                            <thead>
-                              <tr>
-                                <th scope="col"><i class="bi bi-exclamation-circle"></i></th>
-                                <th scope="col">ID</th>
-                                <th scope="col">Title</th>
-                                <th scope="col">Date</th>
-                                <th scope="col"></th>
-                              </tr>
-                            </thead>
-                            <tbody>
-                              <tr class="clickable-row" data-href="clicked_ticket.html">
-                                <th scope="row">122</th>
-                                <td>69</td>
-                                <td>Sept 8, 2023</td>
-                                <td>Sept 11, 2023</td>
-                                <td><i class="bi bi-noise-reduction"></i></td>
-                              </tr>
-      
-                              <!-- clickable row script  -->
-                              <script>
-                                document.addEventListener("DOMContentLoaded", function () {
-                                  const rows = document.querySelectorAll(".clickable-row");
-                              
-                                  rows.forEach((row) => {
-                                    row.addEventListener("click", function () {
-                                      const href = row.getAttribute("data-href");
-                                      if (href) {
-                                        window.location.href = href;
-                                      }
-                                    });
+                          <thead style="background-color: aquamarine;">
+                            <tr>
+                              <th scope="col"><i class="bi bi-exclamation-circle"></i></th>
+                              <th scope="col">ID</th>
+                              <th scope="col">Title</th>
+                              <th scope="col">Date</th>
+                              <th scope="col"></th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr class="clickable-row" data-href="kb-clicked.html">
+                              <th scope="row">122</th>
+                              <td>69</td>
+                              <td>Sept 8, 2023</td>
+                              <td>Sept 11, 2023</td>
+                              <td><i class="bi bi-noise-reduction"></i></td>
+                            </tr>
+                            <tr class="clickable-row" data-href="kb-clicked.html">
+                              <th scope="row">122</th>
+                              <td>69</td>
+                              <td>Sept 8, 2023</td>
+                              <td>Sept 11, 2023</td>
+                              <td><i class="bi bi-noise-reduction"></i></td>
+                            </tr>
+                            <tr class="clickable-row" data-href="kb-clicked.html">
+                              <th scope="row">122</th>
+                              <td>69</td>
+                              <td>Sept 8, 2023</td>
+                              <td>Sept 11, 2023</td>
+                              <td><i class="bi bi-noise-reduction"></i></td>
+                            </tr>
+                            <tr class="clickable-row" data-href="kb-clicked.html">
+                              <th scope="row">122</th>
+                              <td>69</td>
+                              <td>Sept 8, 2023</td>
+                              <td>Sept 11, 2023</td>
+                              <td><i class="bi bi-noise-reduction"></i></td>
+                            </tr>
+                            <tr class="clickable-row" data-href="kb-clicked.html">
+                              <th scope="row">122</th>
+                              <td>69</td>
+                              <td>Sept 8, 2023</td>
+                              <td>Sept 11, 2023</td>
+                              <td><i class="bi bi-noise-reduction"></i></td>
+                            </tr>
+                            <tr class="clickable-row" data-href="kb-clicked.html">
+                              <th scope="row">122</th>
+                              <td>69</td>
+                              <td>Sept 8, 2023</td>
+                              <td>Sept 11, 2023</td>
+                              <td><i class="bi bi-noise-reduction"></i></td>
+                            </tr>
+                            <tr class="clickable-row" data-href="kb-clicked.html">
+                              <th scope="row">122</th>
+                              <td>69</td>
+                              <td>Sept 8, 2023</td>
+                              <td>Sept 11, 2023</td>
+                              <td><i class="bi bi-noise-reduction"></i></td>
+                            </tr>
+                            <tr class="clickable-row" data-href="kb-clicked.html">
+                              <th scope="row">122</th>
+                              <td>69</td>
+                              <td>Sept 8, 2023</td>
+                              <td>Sept 11, 2023</td>
+                              <td><i class="bi bi-noise-reduction"></i></td>
+                            </tr>
+                            <tr class="clickable-row" data-href="kb-clicked.html">
+                              <th scope="row">122</th>
+                              <td>69</td>
+                              <td>Sept 8, 2023</td>
+                              <td>Sept 11, 2023</td>
+                              <td><i class="bi bi-noise-reduction"></i></td>
+                            </tr>
+                            <tr class="clickable-row" data-href="kb-clicked.html">
+                              <th scope="row">122</th>
+                              <td>69</td>
+                              <td>Sept 8, 2023</td>
+                              <td>Sept 11, 2023</td>
+                              <td><i class="bi bi-noise-reduction"></i></td>
+                            </tr>
+                            <tr class="clickable-row" data-href="kb-clicked.html">
+                              <th scope="row">122</th>
+                              <td>69</td>
+                              <td>Sept 8, 2023</td>
+                              <td>Sept 11, 2023</td>
+                              <td><i class="bi bi-noise-reduction"></i></td>
+                            </tr>
+                            <tr class="clickable-row" data-href="kb-clicked.html">
+                              <th scope="row">122</th>
+                              <td>69</td>
+                              <td>Sept 8, 2023</td>
+                              <td>Sept 11, 2023</td>
+                              <td><i class="bi bi-noise-reduction"></i></td>
+                            </tr>
+                            <tr class="clickable-row" data-href="kb-clicked.html">
+                              <th scope="row">122</th>
+                              <td>69</td>
+                              <td>Sept 8, 2023</td>
+                              <td>Sept 11, 2023</td>
+                              <td><i class="bi bi-noise-reduction"></i></td>
+                            </tr>
+                            <tr class="clickable-row" data-href="kb-clicked.html">
+                              <th scope="row">122</th>
+                              <td>69</td>
+                              <td>Sept 8, 2023</td>
+                              <td>Sept 11, 2023</td>
+                              <td><i class="bi bi-noise-reduction"></i></td>
+                            </tr>
+                            <!-- clickable row script  -->
+                            <script>
+                              document.addEventListener("DOMContentLoaded", function () {
+                                const rows = document.querySelectorAll(".clickable-row");
+                      
+                                rows.forEach((row) => {
+                                  row.addEventListener("click", function () {
+                                    const href = row.getAttribute("data-href");
+                                    if (href) {
+                                      window.location.href = href;
+                                    }
                                   });
                                 });
-                              </script>
-      
-                            </tbody>
-                          </table>
+                              });
+                            </script>
+                          </tbody>
+                        </table>
+                      </div>
+                      
                     </div>
+                    <div class="card-footer text-body-secondary" style="display: flex; justify-content: end;">
+                      <button type="button" class="btn btn-primary btn-lg me-5 m-3">Create KB Article</button>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
