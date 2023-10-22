@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!---Coding By CodingLab | www.codinglabweb.com--->
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
