@@ -215,4 +215,7 @@ body {
   .home-section {
     min-height: 150vh;
   }
+  .dash-contents .dash-container .tic-filters{
+    margin-bottom: 1rem;
+  }
 }
