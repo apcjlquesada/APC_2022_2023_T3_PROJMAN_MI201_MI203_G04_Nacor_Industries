@@ -181,6 +181,7 @@ body {
 }
 .dash-contents .dash-container .card-contents{
     grid-column: span 4;
+    border-radius: 20px;
 }
 .dash-contents .dash-container .card-contents .cardheader{
   display: flex;
