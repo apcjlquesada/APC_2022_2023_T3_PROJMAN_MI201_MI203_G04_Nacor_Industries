@@ -162,10 +162,10 @@ body {
   align-items: center;
   justify-content: space-between;
 }
-.home-contents .title h1{
+.home-contents .title h1 {
   font-weight: 700;
 }
-.home-contents .title i{
+.home-contents .title i {
   font-weight: 900;
   font-size: 30px;
 }
@@ -198,10 +198,10 @@ body {
   max-height: 605vh;
   grid-column: span 3;
 }
-.dash-contents .dash-container .ticket-lists .lists{
+.dash-contents .dash-container .ticket-lists .lists {
   /* margin: 10px; */
   /* padding: 30px; */
-  margin-top: 10px  ;
+  margin-top: 10px;
   font-size: 20px;
   /* background: #2e266d; */
   overflow-y: auto;
@@ -215,7 +215,7 @@ body {
   .home-section {
     min-height: 150vh;
   }
-  .dash-contents .dash-container .tic-filters{
+  .dash-contents .dash-container .tic-filters {
     margin-bottom: 1rem;
   }
 }

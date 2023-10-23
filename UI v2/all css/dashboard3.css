@@ -162,10 +162,10 @@ body {
   align-items: center;
   justify-content: space-between;
 }
-.home-contents .title h1{
+.home-contents .title h1 {
   font-weight: 700;
 }
-.home-contents .title i{
+.home-contents .title i {
   /* font-weight: 900; */
   font-size: 20px;
 }

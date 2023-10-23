@@ -156,3 +156,45 @@ body {
   margin: 30px;
   /* border: #05e0e9 1px solid; */
 }
+
+.home-contents .title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.home-contents .title h1{
+  font-weight: 700;
+}
+.home-contents .title i{
+  font-weight: 900;
+  font-size: 30px;
+}
+
+/* edit dashboard contents here */
+.dash-contents {
+  /* text-align: center; */
+}
+
+.dash-contents .dash-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.dash-contents .dash-container .card-contents{
+    grid-column: span 4;
+}
+.dash-contents .dash-container .card-contents .cardheader{
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 25px;
+  /* margin: 10px; */
+}
+.dash-contents .dash-container .card-contents .kb-contents{
+  display: flex;
+  /* flex-wrap: wrap; */
+  font-size: 25px;
+}
+@media (max-width: 1000px) {
+  .home-section {
+    min-height: 150vh;
+  }
+}
