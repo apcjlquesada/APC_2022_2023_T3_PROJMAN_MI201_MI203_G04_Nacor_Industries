@@ -174,8 +174,9 @@
     .home-contents .dash-contents .dash-container .card{
       /* background: #05e0e9; */
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      background-color: #ffffff;
       border-radius: 25px;
-      height: 85vh;
+      height: 100%;
     }
 
     @media (max-width: 1000px) {
@@ -250,7 +251,7 @@
                     <i class="bi bi-bell" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
                     <ul class="dropdown-menu" style="">
                       <li><span class="dropdown-item-text">Notifications</span></li>
-                      <li><hr class="dropdown-divider"></li>
+                      <li><hr style="border:1px; color:#e9e9e9;">dropdown-divider</li>
                       <li><a class="dropdown-item" href="#">Notifications  1</a></li>
                       <li><a class="dropdown-item" href="#">Notifications 2</a></li>
                     </ul>
@@ -271,49 +272,49 @@
             <div class="dash-container">
               
               <div class="card border-0">
-                <div class="card-header p-4" style="display: flex; justify-content: space-between; font-size: 30px; font-weight: 600;">
-                  Broken Project <!-- Ticket Title -->
-                  <span style="font-weight: 200; font-size: 20px">October 01, 2023 - October 31, 2023<i class="bi bi-info-circle ms-4 me-2"></i></span>
+                <div class="card-header p-4" style="display: flex; justify-content: space-between; color: #242934; font-size: 26.2px; font-weight: 700;">
+                  Broken Projector <!-- Ticket Title -->
+                  <span style="font-weight: 300; color:#817e9d; font-size: 21px">October 31, 2023<i class="bi bi-info-circle ms-4 me-2"></i></span>
                 </div>
                 <div class="card-body" style="padding: 5px;   display: grid; grid-template-columns: 1fr 1fr 1fr 1fr;">
 
                   <!-- ticket status -->
-                  <div class="ticket-status me-2" style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
-                    <h4 class="pt-4 ps-4 pb-3 fw-bold">Status Tracking</h4>
+                  <div class="ticket-status me-2" style="">
+                    <h4 style="color: #817e9d; font-size: 21px; font-weight: 700;" class="pt-4 ps-4 pb-3 fw-bold">Status Tracking</h4>
                     <div class="status-display" style="overflow-y: auto; max-height: 55vh;">
                       <ul style="list-style: none; padding: 10px;">
                         <li style="margin: 10px 0; padding: 10px; border-left: 5px solid #6644A8;">
-                          <h5>Opened</h5>
+                          <h5 style="font-weight: 600; color: #6644a8">Opened</h5>
                           <h5>2023-03-21 00:00:00</h5>
                           <h5>Assigned To: Val Rodelas</h5>
                         </li>
                         <li style="margin: 10px 0; padding: 10px; border-left: 5px solid #6644A8;">
-                          <h5>Opened</h5>
+                          <h5 style="font-weight: 600; color: #6644a8">Opened</h5>
                           <h5>2023-03-21 00:00:00</h5>
                           <h5>Assigned To: Val Rodelas</h5>
                         </li>
                         <li style="margin: 10px 0; padding: 10px; border-left: 5px solid #6644A8;">
-                          <h5>Opened</h5>
+                          <h5 style="font-weight: 600; color: #6644a8">Opened</h5>
                           <h5>2023-03-21 00:00:00</h5>
                           <h5>Assigned To: Val Rodelas</h5>
                         </li>
                         <li style="margin: 10px 0; padding: 10px; border-left: 5px solid #6644A8;">
-                          <h5>Opened</h5>
+                          <h5 style="font-weight: 600; color: #6644a8">Opened</h5>
                           <h5>2023-03-21 00:00:00</h5>
                           <h5>Assigned To: Val Rodelas</h5>
                         </li>
                         <li style="margin: 10px 0; padding: 10px; border-left: 5px solid #6644A8;">
-                          <h5>Opened</h5>
+                          <h5 style="font-weight: 600; color: #6644a8">Opened</h5>
                           <h5>2023-03-21 00:00:00</h5>
                           <h5>Assigned To: Val Rodelas</h5>
                         </li>
                         <li style="margin: 10px 0; padding: 10px; border-left: 5px solid #6644A8;">
-                          <h5>Opened</h5>
+                          <h5 style="font-weight: 600; color: #6644a8">Opened</h5>
                           <h5>2023-03-21 00:00:00</h5>
                           <h5>Assigned To: Val Rodelas</h5>
                         </li>
                         <li style="margin: 10px 0; padding: 10px; border-left: 5px solid #6644A8;">
-                          <h5>Opened</h5>
+                          <h5 style="font-weight: 600; color: #6644a8">Opened</h5>
                           <h5>2023-03-21 00:00:00</h5>
                           <h5>Assigned To: Val Rodelas</h5>
                         </li>
@@ -322,7 +323,7 @@
                   </div>
 
                   <!-- ticket details -->
-                  <div class="ticket-details" style="grid-column: span 3; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                  <div class="ticket-details" style="grid-column: span 3;">
                     <div class="header p-5" style="display: flex; justify-content: space-between; ">
                       <div class="tic-header deets fw-semibold">
                         <h5>Sent by: Ruth</h5>
@@ -379,7 +380,7 @@
 
                   <!-- update dropup -->
                   <div class="dropdown"> 
-                    <button class="btn dropdown-toggle btn-lg me-3" type="button" data-bs-toggle="dropdown" aria-expanded="false" style="background: #6644A8; color: white;">
+                    <button class="btn dropdown-toggle btn-lg me-3" type="button" data-bs-toggle="dropdown" aria-expanded="false" style="background: #6644A8; color: white; border-radius: 25px;">
                       Update
                     </button>
                     <ul class="dropdown-menu">
