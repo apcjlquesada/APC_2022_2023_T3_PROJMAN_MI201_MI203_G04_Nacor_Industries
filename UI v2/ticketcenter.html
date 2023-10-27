@@ -201,10 +201,23 @@
       border-radius: 25px;
       max-height: 80vh;
     }
-
+    .dash-contents .dash-container .tic-filters .dropdiv .container .titlename{
+      color: #817E9D;
+      font-weight: 500;
+    }
+    .dash-contents .dash-container .tic-filters .dropdiv .container button{
+      /* box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2); */
+      border-radius: 25px;
+      background-color: #E9E9E9;
+      color: #817E9D;
+      
+    }
     .dash-contents .dash-container .tic-filters .head {
       display: flex;
       justify-content: space-between;
+      font-size: 30px;
+      font-weight: 700;
+      color: #817E9D;
     }
     .dash-contents .dash-container .ticket-lists {
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -278,9 +291,9 @@
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="device-list.html">
             <i class="bi bi-pc-display"></i>
-            <span class="link_name">Personal Tickets</span>
+            <span class="link_name">Device Management</span>
           </a>
         </li>
       </ul>
@@ -319,7 +332,10 @@
           <!-- <div class="dashboard-boxes"></div> -->
             <div class="title mb-5">
               <h1>Ticket Center</h1>
-              <i class="bi bi-arrows-expand"></i>
+              <div>
+                <button type="button" class="btn btn-primary">View My Tickets</button>
+                <i class="bi bi-arrows-expand"></i>
+              </div>
             </div>
 
             <div class="dash-contents">
@@ -330,17 +346,17 @@
                     <i class="bi bi-arrow-repeat"></i>
                   </div>
                   <hr>
-                  <div class="cont pt-3">
+                  <div class="container pt-3 ps-4 dropdiv">
                     <!-- regency -->
-                    <div class="container text-center pb-5 mb-3">
+                    <div class="container pb-5 mb-3">
                       <div class="row">
-                        <div class="col">
+                        <div class="col titlename">
                           Regency
                         </div>
                         <div class="col">
                           <div class="dropdown pe-5">
-                            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                              Dropdown button
+                            <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              Select Here
                             </button>
                             <ul class="dropdown-menu">
                               <li><a class="dropdown-item" href="#">This Day</a></li>
@@ -352,15 +368,15 @@
                       </div>
                     </div>
                     <!-- Catgeory -->
-                    <div class="container text-center pb-5 mb-3">
+                    <div class="container pb-5 mb-3">
                       <div class="row">
-                        <div class="col">
+                        <div class="col titlename">
                           Category
                         </div>
                         <div class="col">
                           <div class="dropdown pe-5">
-                            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                              Dropdown button
+                            <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              Select Here
                             </button>
                             <ul class="dropdown-menu">
                               <li><a class="dropdown-item" href="#">Software</a></li>
@@ -371,15 +387,15 @@
                       </div>
                     </div>
                     <!-- Status -->
-                    <div class="container text-center pb-5 mb-3">
+                    <div class="container pb-5 mb-3">
                       <div class="row">
-                        <div class="col">
+                        <div class="col titlename">
                           Status
                         </div>
                         <div class="col">
                           <div class="dropdown pe-5">
-                            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                              Dropdown button
+                            <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              Select Here
                             </button>
                             <ul class="dropdown-menu">
                               <li><a class="dropdown-item" href="#">Action</a></li>
@@ -391,15 +407,15 @@
                       </div>
                     </div>
                     <!-- Agent -->
-                    <div class="container text-center pb-5 mb-3">
+                    <div class="container pb-5 mb-3">
                       <div class="row">
-                        <div class="col">
+                        <div class="col titlename">
                           Agent
                         </div>
                         <div class="col">
                           <div class="dropdown pe-5">
-                            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                              Dropdown button
+                            <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              Select Here
                             </button>
                             <ul class="dropdown-menu">
                               <li><a class="dropdown-item" href="#">Action</a></li>
@@ -411,15 +427,15 @@
                       </div>
                     </div>
                     <!-- Level -->
-                    <div class="container text-center pb-5">
+                    <div class="container pb-5">
                       <div class="row">
-                        <div class="col">
+                        <div class="col titlename">
                           Level
                         </div>
                         <div class="col">
                           <div class="dropdown pe-5">
-                            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                              Dropdown button
+                            <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              Select Here
                             </button>
                             <ul class="dropdown-menu">
                               <li><a class="dropdown-item" href="#">Action</a></li>

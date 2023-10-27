@@ -191,7 +191,7 @@
 
     .dash-contents .dash-container {
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     }
 
     .dash-contents .dash-container .kb-categories {
@@ -213,7 +213,7 @@
       /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
       border-radius: 25px;
       max-height: 75vh;
-      grid-column: span 3;
+      grid-column: span 4;
     }
     .dash-contents .dash-container .kb-list .lists {
       margin-top: 10px;
@@ -228,6 +228,9 @@
       }
       .home-section {
         min-height: 150vh;
+      }
+      .dash-contents .dash-container .kb-categories{
+        margin-bottom: 1rem;
       }
     }
 
@@ -257,7 +260,7 @@
           </a>
         </li>
         <li>
-          <a href="knowledge_base.html">
+          <a href="#">
             <i class="bi bi-lightbulb"></i>
             <span class="link_name">Knowledge Base</span>
           </a>
@@ -275,9 +278,9 @@
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="device-list.html">
             <i class="bi bi-pc-display"></i>
-            <span class="link_name">Personal Tickets</span>
+            <span class="link_name">Device Management</span>
           </a>
         </li>
       </ul>
@@ -340,7 +343,7 @@
                     <div class="card-body p-0">
                       <div class="lists">
                         <table class="table table-striped">
-                          <thead style="background-color: aquamarine;">
+                          <thead>
                             <tr>
                               <th scope="col"><i class="bi bi-exclamation-circle"></i></th>
                               <th scope="col">ID</th>
