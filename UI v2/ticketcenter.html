@@ -205,7 +205,7 @@
       color: #817E9D;
       font-weight: 500;
     }
-    .dash-contents .dash-container .tic-filters .dropdiv .container button{
+    .dash-contents .dash-container .tic-filters .dropdiv .container select{
       /* box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2); */
       border-radius: 25px;
       background-color: #E9E9E9;
@@ -332,9 +332,9 @@
           <!-- <div class="dashboard-boxes"></div> -->
             <div class="title mb-5">
               <h1>Ticket Center</h1>
-              <div>
-                <button type="button" class="btn btn-primary">View My Tickets</button>
-                <i class="bi bi-arrows-expand"></i>
+              <div style="display: grid; grid-template-columns: 1fr 1fr">
+                <button type="button" class="btn btn-primary" style="border-radius: 25px; background-color: #6644A8 ;">View My Tickets</button>
+                <i class="bi bi-arrows-expand ms-5"></i>
               </div>
             </div>
 
@@ -346,7 +346,7 @@
                     <i class="bi bi-arrow-repeat"></i>
                   </div>
                   <hr>
-                  <div class="container pt-3 ps-4 dropdiv">
+                  <div class="container pt-3 ps-4 dropdiv mt-5">
                     <!-- regency -->
                     <div class="container pb-5 mb-3">
                       <div class="row">
@@ -354,16 +354,12 @@
                           Regency
                         </div>
                         <div class="col">
-                          <div class="dropdown pe-5">
-                            <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                              Select Here
-                            </button>
-                            <ul class="dropdown-menu">
-                              <li><a class="dropdown-item" href="#">This Day</a></li>
-                              <li><a class="dropdown-item" href="#">This Week</a></li>
-                              <li><a class="dropdown-item" href="#">This Month</a></li>
-                            </ul>
-                          </div>
+                          <select class="form-select" aria-label="Default select example">
+                            <option selected disabled>Open this select menu</option>
+                            <option value="1">Daily</option>
+                            <option value="2">Weekly</option>
+                            <option value="3">Monthly</option>
+                          </select>
                         </div>
                       </div>
                     </div>
@@ -374,15 +370,11 @@
                           Category
                         </div>
                         <div class="col">
-                          <div class="dropdown pe-5">
-                            <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                              Select Here
-                            </button>
-                            <ul class="dropdown-menu">
-                              <li><a class="dropdown-item" href="#">Software</a></li>
-                              <li><a class="dropdown-item" href="#">Infrastructure</a></li>
-                            </ul>
-                          </div>
+                          <select class="form-select" aria-label="Default select example">
+                            <option selected disabled>Open this select menu</option>
+                            <option value="1">Software</option>
+                            <option value="2">Infrastructure</option>
+                          </select>
                         </div>
                       </div>
                     </div>
@@ -393,16 +385,12 @@
                           Status
                         </div>
                         <div class="col">
-                          <div class="dropdown pe-5">
-                            <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                              Select Here
-                            </button>
-                            <ul class="dropdown-menu">
-                              <li><a class="dropdown-item" href="#">Action</a></li>
-                              <li><a class="dropdown-item" href="#">Another action</a></li>
-                              <li><a class="dropdown-item" href="#">Something else here</a></li>
-                            </ul>
-                          </div>
+                          <select class="form-select" aria-label="Default select example">
+                            <option selected disabled>Open this select menu</option>
+                            <option value="1">Pending</option>
+                            <option value="2">New</option>
+                            <option value="3">CLosed</option>
+                          </select>
                         </div>
                       </div>
                     </div>
@@ -413,16 +401,12 @@
                           Agent
                         </div>
                         <div class="col">
-                          <div class="dropdown pe-5">
-                            <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                              Select Here
-                            </button>
-                            <ul class="dropdown-menu">
-                              <li><a class="dropdown-item" href="#">Action</a></li>
-                              <li><a class="dropdown-item" href="#">Another action</a></li>
-                              <li><a class="dropdown-item" href="#">Something else here</a></li>
-                            </ul>
-                          </div>
+                          <select class="form-select" aria-label="Default select example">
+                            <option selected disabled>Open this select menu</option>
+                            <option value="1">Vincent Nacor</option>
+                            <option value="2">Ruth Morallos</option>
+                            <option value="3">Patrick Cortez</option>
+                          </select>
                         </div>
                       </div>
                     </div>
@@ -433,16 +417,12 @@
                           Level
                         </div>
                         <div class="col">
-                          <div class="dropdown pe-5">
-                            <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                              Select Here
-                            </button>
-                            <ul class="dropdown-menu">
-                              <li><a class="dropdown-item" href="#">Action</a></li>
-                              <li><a class="dropdown-item" href="#">Another action</a></li>
-                              <li><a class="dropdown-item" href="#">Something else here</a></li>
-                            </ul>
-                          </div>
+                          <select class="form-select" aria-label="Default select example">
+                            <option selected disabled>Open this select menu</option>
+                            <option value="1">I</option>
+                            <option value="2">II</option>
+                            <option value="3">III</option>
+                          </select>
                         </div>
                       </div>
                     </div>
