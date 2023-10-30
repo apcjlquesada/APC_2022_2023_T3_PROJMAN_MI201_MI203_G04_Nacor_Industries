@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>Create Ticket | RAMS Corner</title>
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+        <!---internal CSS--->
+<style>
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: #f6f7FB;
+}
+.container {
+  position: relative;
+  max-width: 700px;
+  width: 100%;
+  background: #fff;
+  padding: 25px;
+  border-radius: 25px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.container .title{
+    font-size: 27px;
+    font-weight: bold;
+    position: relative;
+    color: #242934;
+}
+/* title highlight */
+.container .title::before{ 
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 96px;
+    background: linear-gradient(135deg, #6644a8, #05e0e9)
+}
+/* .container header { 
+  font-size: 1.5rem;
+  color: #333;
+  font-weight: 500;
+  text-align: center;
+} */
+
+.container .form {
+  margin-top: 30px;
+}
+.form .input-box {
+  width: 100%;
+  margin-top: 20px;
+}
+.input-box label {
+  color: #333;
+}
+.form :where(.input-box input, .select-box) {
+  position: relative;
+  height: 50px;
+  width: 100%;
+  outline: none;
+  font-size: 1rem;
+  color: #817e9d;
+  margin-top: 8px;
+  border: 1px solid #ddd;
+  border-radius: 25px;
+  padding: 0 15px;
+}
+.input-box input:focus {
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+}
+.form .column {
+  display: flex;
+  column-gap: 15px;
+}
+.form .device-type{
+  margin-top: 20px;
+}
+/*
+.device-box h3 {
+  color: #817e9d;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 8px;
+}*/
+
+.form :where(.options, .device) {
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+  column-gap: 125px;
+  flex-wrap: wrap;
+  margin-bottom: 5px;
+  row-gap: 15px;
+  margin-bottom: .90rem;
+}
+
+.form .device {
+  column-gap: 125px;
+}
+.device input {
+  accent-color: #817e9d;
+}
+.form :where(.device input, .device label) {
+  cursor: pointer;
+}
+.device label {
+  color: #707070;
+}
+
+.select-box select {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  border: none;
+  color: #707070;
+  font-size: 1rem;
+}
+
+input[type="file"] {
+    display: none;
+}
+.custom-file-upload {
+    border: 1px solid #ddd;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+    border-radius: 25px;
+    background-color: #ddd;
+    /* color: #fff; */
+}
+.custom-file-upload:hover {
+    background: wheat;
+}
+
+/*buttons*/
+.form .buttons {
+  display: flex;
+  column-gap: 5px;
+  margin-top: 40px;
+}
+.add-btn{
+  height: 55px;
+  width: 50%;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 400;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: #6644a8;
+  right: 0%;
+}
+.add-btn:hover {
+  background: #05e0e9;
+}
+.cancel-btn{
+  height: 55px;
+  width: 50%;
+  right: 0%;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 400;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: #e2e4e9;
+}
+.cancel-btn:hover {
+  background: #817e9d;
+}
+/*Responsive*/
+@media screen and (max-width: 500px) {
+  .form .column {
+    flex-wrap: wrap;
+  }
+  .form .buttons {
+    flex-wrap: wrap;
+  }
+  .form :where(.options, .device) {
+    row-gap: 15px;
+  }
+}
+
+</style>
+
+<!-- Hi Ruth -->
+
+  </head>
+  <body>
+    <section class="container">
+      <div class="title">Create Ticket</div>
+      <form action="#" class="form">
+        <div class="input-box">
+          <label>CC</label>
+          <input type="text" placeholder="Tag a Persona" required maxlength="15"/> 
+        </div>
+
+        <div class="input-box">
+          <label>Ticket Title</label>
+          <input type="text" placeholder="Enter Title" required />
+        </div>
+
+        <div class="device-type">
+            <span>Category</span>
+            <div class="options">
+              <div class="device">
+                <input type="radio" id="c-software" name="types" value="Software" checked> <span style="color:#707070; margin-bottom: 5px;">Software</span>
+              </div>
+              <div class="device">
+                <input type="radio" id="c-hardware" name="types" value="Hardware" /> <span style="color:#707070;">Hardware</span>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="Description">
+            <label for="Description">Description</label>
+            <textarea id="Description1" name="Description" placeholder="Enter Description" style="resize:vertical; width:100%; border-radius:25px; padding:.5rem; font-size:1rem; color: #817e9d; border: 1px solid  #ddd; height: 12vh; margin-top: 10px;""></textarea>
+          </div>
+
+          <div class="input-box designation">
+            <label>Occurrence Location</label>
+            <div class="column">
+              <div class="select-box">
+                <select>
+                  <option hidden>Floor</option>
+                  <option>1st floor</option>
+                  <option>2nd floor</option>
+                  <option>3rd floor</option>
+                  <option>4th floor</option>
+                  <option>5th floor</option>
+                  <option>6th floor</option>
+                  <option>7th floor</option>
+                  <option>8th floor</option>
+                  <option>9th floor</option>
+                  <option>10th floor</option>   
+                  <option>11th floor</option>
+                  <option>12th floor</option>
+                </select>
+              </div>
+              <!-- <input type="number" placeholder="Room Number" required /> -->
+              <!-- <input type="file" id="myFile" name="filename"> -->
+              <label class="custom-file-upload">
+                <input type="file"/>
+                <span class="material-symbols-outlined" style="margin-top: 10px; margin-left: 25px; flex-wrap: wrap; width: 50px;">
+                    add_photo_alternate
+                    </span>
+            </label>
+            </div>
+          </div>
+
+          <div class="buttons">
+            <button class="button cancel-btn">Cancel</button>
+            <button class="button add-btn">Submit</button>
+        </div>
+      </form>
+    </section>
+  </body>
+</html>

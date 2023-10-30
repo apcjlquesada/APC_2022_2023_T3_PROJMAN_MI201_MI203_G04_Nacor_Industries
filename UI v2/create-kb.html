@@ -55,7 +55,7 @@ body {
 }
 
 .form :where(.resolution input, .article input, .select-box) {
-  height: 50px;
+  height: 7vh;
   width: 100%;
   outline: none;
   font-size: 1rem;
@@ -65,10 +65,16 @@ body {
   border-radius: 25px;
   padding: 0 15px;
 
-}
-.resolution input:focus, .article input:focus{
+} 
+
+.article input:focus {
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
 }
+
+#resolution1:focus {
+  border: 1px solid  #fb22ff;
+}
+
 
 .form .categories{
   margin-top: 20px;
@@ -80,7 +86,7 @@ body {
   align-items: center;
   column-gap: 125px;
   flex-wrap: wrap;
-  margin-bottom: 5px;
+  margin-bottom: .90rem;
 }
 
 .type input {
@@ -89,20 +95,7 @@ body {
 .form :where(.type input, .type label) {
   cursor: pointer;
 }
-.type label {
-  color: #707070;
-}
-.address :where(input, .select-box) {
-  margin-top: 15px;
-}
-.select-box select {
-  height: 100%;
-  width: 100%;
-  outline: none;
-  border: none;
-  color: #707070;
-  font-size: 1rem;
-}
+
 /*buttons*/
 .form .buttons {
   display: flex;
@@ -159,26 +152,30 @@ body {
       <div class="title">Add New KB Entry</div>
       <form action="#" class="form">
         <div class="article">
-          <label>KB Article Title</label>
-          <input type="text" placeholder="Enter Article Title" maxlength="20" required />
+          <label for="title">KB Article Title</label>
+          <input type="text" id="title" name="title" placeholder="Enter Article Title" maxlength="20" required />
         </div>
         <div class="categories">
-          <label>Category</label>
+          <span>Category</span>
           <div class="options">
             <div class="type">
-              <input type="radio" id="c-software" name="types" checked />
-              <label for="software">Software</label>
+              <input type="radio" id="c-software" name="types" value="Software" checked> <span style="color:#707070; margin-bottom: 5px;">Software</span>
             </div>
             <div class="type">
-              <input type="radio" id="c-hardware" name="types" />
-              <label for="check-networking">Hardware</label>
+              <input type="radio" id="c-hardware" name="types" value="Hardware" /> <span style="color:#707070;">Hardware</span>
             </div>
           </div>
         </div>
-        <div class="resolution" >
-          <label>Resolution</label>
-          <input textarea rows = "5" cols = "60" name="text" placeholder="Enter Resolution"></input>
+        <!-- <div class="resolution">
+          <label for="resolution">Resolution</label>
+          <input type="text" rows = "5" cols = "60" id="resolution" name="resolution" placeholder="Enter Resolution" style="resize:both;"></input>
+        </div> -->
+        <div class="resolution">
+          <label for="resolution">Resolution</label>
+          <textarea id="resolution1" name="resolution" placeholder="Enter Resolution" style="resize:vertical; width:100%; border-radius:25px; padding:.5rem; font-size:1rem; color: #817e9d; border: 1px solid  #ddd; height: 12vh; margin-top: 10px;""></textarea>
         </div>
+
+        
         <div class="buttons">
           <button class="button cancel-btn">Cancel</button>
           <button class="button add-btn">Submit</button>
