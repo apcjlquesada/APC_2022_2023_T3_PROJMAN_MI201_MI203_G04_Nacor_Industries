@@ -41,11 +41,9 @@
       box-shadow: -3px 0 5px 0 #555;
       /* box-shadow: 0 0 10px rgba(0, 0, 0, 1); */
     }
-
     .sidebar.active {
       width: 300px;
     }
-
     .sidebar .logo-details {
       margin-bottom: 5vh;
       /* align-items: center; */
@@ -55,7 +53,6 @@
       height: 40px;
       margin-top: 20px;
     }
-
     .sidebar.active .logo-details .profile img {
       width: 80px;
       height: 80px;
@@ -170,6 +167,13 @@
     .home-section nav .profile-details i {
       margin: 15px;
     }
+
+    .home-section nav .profile-details img{
+      height: 50px;
+      width: 50px;
+      border-radius: 50px;
+    }
+    /*header css ends here*/
 
     .home-contents {
       margin: 30px;
@@ -302,8 +306,8 @@
       </ul>
     </div>
 
-    <!-- header/contents -->
     <section class="home-section">
+      <!-- nav-header -->
         <nav>
             <div class="sidebar-button">
                 <i class="bi bi-list sidebarBtn"></i>
@@ -322,8 +326,8 @@
                   </div>
 
                   <div class="dropdown2">
-                    <i class="bi bi-person-circle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
-                    
+                    <!-- <i class="bi bi-person-circle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i> -->
+                    <img src="/UI v2/resources/SampleLogo.jpg" alt="My Icon" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                       <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="#">Sign out</a></li>
                       </ul>
@@ -331,6 +335,7 @@
             </div>
         </nav>
 
+        <!-- dashboard -->
         <div class="home-contents">
           <div class="dashboard-boxes"></div>
             <div class="title mb-5">
@@ -440,7 +445,6 @@
               </script>
             </div>
         </div>
-
     </section>
     
 
