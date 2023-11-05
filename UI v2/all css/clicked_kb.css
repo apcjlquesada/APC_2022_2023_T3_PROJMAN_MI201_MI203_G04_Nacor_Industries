@@ -162,10 +162,10 @@ body {
   align-items: center;
   justify-content: space-between;
 }
-.home-contents .title h1{
+.home-contents .title h1 {
   font-weight: 700;
 }
-.home-contents .title i{
+.home-contents .title i {
   font-weight: 900;
   font-size: 30px;
 }
@@ -179,17 +179,17 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
 }
-.dash-contents .dash-container .card-contents{
-    grid-column: span 4;
-    border-radius: 20px;
+.dash-contents .dash-container .card-contents {
+  grid-column: span 4;
+  border-radius: 20px;
 }
-.dash-contents .dash-container .card-contents .cardheader{
+.dash-contents .dash-container .card-contents .cardheader {
   display: flex;
   flex-wrap: wrap;
   font-size: 25px;
   /* margin: 10px; */
 }
-.dash-contents .dash-container .card-contents .kb-contents{
+.dash-contents .dash-container .card-contents .kb-contents {
   display: flex;
   /* flex-wrap: wrap; */
   font-size: 25px;
