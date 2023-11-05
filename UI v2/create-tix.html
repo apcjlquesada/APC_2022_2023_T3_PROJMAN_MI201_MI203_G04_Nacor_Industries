@@ -98,20 +98,23 @@ body {
   margin-bottom: 8px;
 }*/
 
-.form :where(.options, .device) {
-  margin-top: 5px;
-  display: flex;
+
+
+.form :where(.device-option, .device) {
+  display: flex; 
   align-items: center;
   column-gap: 125px;
   flex-wrap: wrap;
-  margin-bottom: 5px;
-  row-gap: 15px;
-  margin-bottom: .90rem;
+  margin-top: 5px;
+}
+.form .device {
+  column-gap: 5px;
+}
+.form :where(.device input, .device label) {
+  cursor: pointer;
 }
 
-.form .device {
-  column-gap: 125px;
-}
+
 .device input {
   accent-color: #817e9d;
 }
@@ -123,7 +126,7 @@ body {
 }
 
 .select-box select {
-  height: 100%;
+  height: 50px;
   width: 100%;
   outline: none;
   border: none;
@@ -131,20 +134,39 @@ body {
   font-size: 1rem;
 }
 
-input[type="file"] {
+/* input[type="file"] {
     display: none;
 }
 .custom-file-upload {
-    border: 1px solid #ddd;
-    display: inline-block;
+    border: none;
     padding: 6px 12px;
     cursor: pointer;
     border-radius: 25px;
     background-color: #ddd;
     /* color: #fff; */
-}
+/* }
 .custom-file-upload:hover {
     background: wheat;
+}  */ */
+
+/* upload */
+.upload {
+  height: 100%;
+  width: 100%;
+  border-top: 10px;
+  color: #817e9d;
+  border: 1px solid #ddd;
+  
+}
+
+.upload-box {
+font-size: 1rem;
+background:white;
+border-radius: 25px;
+width:100%;
+outline:none;
+color: #817e9d;
+border: 1px solid #ddd;
 }
 
 /*buttons*/
@@ -198,6 +220,21 @@ input[type="file"] {
   }
 }
 
+::-webkit-file-upload-button {
+  color:white;
+  background: #817e9d;
+  padding: 20px;
+  border:none;
+  border-radius: 25px;
+  outline:none;
+
+}
+
+::-webkit-file-upload-button:hover {
+  background: #6644a8;
+
+}
+
 </style>
 
 <!-- Hi Ruth -->
@@ -217,17 +254,19 @@ input[type="file"] {
           <input type="text" placeholder="Enter Title" required />
         </div>
 
-        <div class="device-type">
-            <span>Category</span>
-            <div class="options">
-              <div class="device">
-                <input type="radio" id="c-software" name="types" value="Software" checked> <span style="color:#707070; margin-bottom: 5px;">Software</span>
-              </div>
-              <div class="device">
-                <input type="radio" id="c-hardware" name="types" value="Hardware" /> <span style="color:#707070;">Hardware</span>
-              </div>
+        <div class="device-type"">
+          <label>Device Type</label>
+          <div class="device-option">
+            <div class="device">
+              <input type="radio" id="Hardware" name="device" />
+              <label for="Hardware">Hardware</label>
+            </div>
+            <div class="device">
+              <input type="radio" id="Software" name="device" checked />
+              <label for="Software">Software</label>
             </div>
           </div>
+        </div>
           <div class="input-box">
             <label>Device ID</label>
             <input type="text" placeholder="ITRO-DEV-ID" required maxlength="15" style="text-transform:uppercase; margin-bottom:1rem"/> 
@@ -237,7 +276,7 @@ input[type="file"] {
             <label for="Description">Description</label>
             <textarea id="Description1" name="Description" placeholder="Enter Description" style="resize:vertical; width:100%; border-radius:25px; padding:.5rem; font-size:1rem; color: #817e9d; border: 1px solid  #ddd; height: 12vh; margin-top: 10px;""></textarea>
           </div>
-
+<!-- 
           <div class="input-box designation">
             <label>Occurrence Location</label>
             <div class="column">
@@ -258,16 +297,24 @@ input[type="file"] {
                   <option>12th floor</option>
                 </select>
               </div>
-              <!-- <input type="number" placeholder="Room Number" required /> -->
-              <!-- <input type="file" id="myFile" name="filename"> -->
-              <label class="custom-file-upload">
-                <input type="file"/>
-                <span class="material-symbols-outlined" style="margin-top: 10px; margin-left: 25px; flex-wrap: wrap; width: 50px;">
-                    add_photo_alternate
-                    </span>
-            </label>
             </div>
-          </div>
+          </div> -->
+<!-- <div>
+
+  <input type="file" id="myFile" name="filename">
+  <label class="custom-file-upload"> 
+   <input type="file"/>
+   <span class="material-symbols-outlined" style="margin-top: 10px; margin-left: 25px; flex-wrap: wrap; width: 50px;">
+       add_photo_alternate
+       </span>
+</label>
+</div> -->
+
+         <div class="upload" style="margin-top: 10px;">
+            <label>Upload File</label>
+            <input type="file" class="upload-box" accept="image/*" style="margin-top: 10px;"/> 
+            
+          </div> 
 
           <div class="buttons">
             <button class="button cancel-btn">Cancel</button>
