@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <title>Create Ticket | RAMS Corner</title>
     <!-- <link rel="stylesheet" href="style.css" /> -->
-        <!---internal CSS--->
+        <!--internal CSS-->
 <style>
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
@@ -254,15 +254,15 @@ border: 1px solid #ddd;
           <input type="text" placeholder="Enter Title" required />
         </div>
 
-        <div class="device-type"">
+        <!-- <div class="device-type">
           <label>Device Type</label>
           <div class="device-option">
             <div class="device">
-              <input type="radio" id="Hardware" name="device" />
+              <input type="radio" id="Hardware" name="device"/>
               <label for="Hardware">Hardware</label>
             </div>
             <div class="device">
-              <input type="radio" id="Software" name="device" checked />
+              <input type="radio" id="Software" name="device"/>
               <label for="Software">Software</label>
             </div>
           </div>
@@ -270,14 +270,57 @@ border: 1px solid #ddd;
           <div class="input-box">
             <label>Device ID</label>
             <input type="text" placeholder="ITRO-DEV-ID" required maxlength="15" style="text-transform:uppercase; margin-bottom:1rem"/> 
+          </div> -->
+          <div class="device-type">
+            <label>Device Type</label>
+            <div class="device-option">
+              <div class="device">
+                <input type="radio" id="Hardware" name="device" />
+                <label for="Hardware">Hardware</label>
+              </div>
+              <div class="device">
+                <input type="radio" id="Software" name="device" />
+                <label for="Software">Software</label>
+              </div>
+            </div>
           </div>
+          <div class="input-box" id="device-id">
+            <label>Device ID</label>
+            <input type="text" placeholder="ITRO-DEV-ID" required maxlength="15" style="text-transform: uppercase; margin-bottom: 1rem" />
+          </div>
+          <script>
+            document.addEventListener("DOMContentLoaded", function () {
+              const hardwareRadio = document.getElementById("Hardware");
+              const softwareRadio = document.getElementById("Software");
+              const deviceIdDiv = document.getElementById("device-id");
+            
+              // Function to hide the Device ID div
+              function hideDeviceId() {
+                deviceIdDiv.style.display = "none";
+              }
+            
+              // Function to show the Device ID div
+              function showDeviceId() {
+                deviceIdDiv.style.display = "block";
+              }
+            
+              // Initially, hide the Device ID div
+              hideDeviceId();
+            
+              // Add event listeners to the radio buttons
+              hardwareRadio.addEventListener("change", showDeviceId);
+              softwareRadio.addEventListener("change", hideDeviceId);
+            });
+            
+          </script>          
+          
 
           <div class="Description">
             <label for="Description">Description</label>
-            <textarea id="Description1" name="Description" placeholder="Enter Description" style="resize:vertical; width:100%; border-radius:25px; padding:.5rem; font-size:1rem; color: #817e9d; border: 1px solid  #ddd; height: 12vh; margin-top: 10px;""></textarea>
+            <textarea id="Description1" name="Description" placeholder="Enter Description" style="resize:vertical; width:100%; border-radius:25px; padding:.5rem; font-size:1rem; color: #817e9d; border: 1px solid  #ddd; height: 12vh; margin-top: 10px;"></textarea>
           </div>
-<!-- 
-          <div class="input-box designation">
+
+          <!-- <div class="input-box designation">
             <label>Occurrence Location</label>
             <div class="column">
               <div class="select-box">
