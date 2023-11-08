@@ -316,15 +316,26 @@
             <div class="profile-details">
 
                   <div class="dropdown1">
-                    <i class="bi bi-bell" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
+                    <i class="bi bi-bell" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside"></i>
                     <ul class="dropdown-menu dropdown-menu-end">
                       <li><span class="dropdown-item-text" style="font-weight: 700;">Notifications</span></li>
                       <li><hr class="dropdown-divider"></li>
-                      <button class="btn" type="button" style="border-radius: 25px; background-color: #F6F7FB; font-weight:700; color: #817E9D; margin: 10px;">Ticket Updates</button>
-                      <button class="btn" type="button" style="border-radius: 25px; background-color: #F6F7FB; font-weight:700; color: #817E9D;  margin: 10px;">Ticket Chats</button>
-                      
-                      <li><a class="dropdown-item" href="#">Notifications  1</a></li>
-                      <li><a class="dropdown-item" href="#">Notifications 2</a></li>
+                      <!-- <button class="btn" type="button" style="border-radius: 25px; background-color: #F6F7FB; font-weight:700; color: #817E9D; margin: 10px;">Ticket Updates</button>
+                      <button class="btn" type="button" style="border-radius: 25px; background-color: #F6F7FB; font-weight:700; color: #817E9D;  margin: 10px;">Ticket Chats</button> -->
+                      <div class="d-grid gap-2 d-md-block m-3">
+                        <button class="btn" type="button" style="border-radius: 25px; font-weight:700; color: #817E9D; " >Ticket Updates</button>
+                        <button class="btn" type="button" style="border-radius: 25px; font-weight:700; color: #817E9D;">Ticket Chats</button>
+                        <style>
+                          button:focus{
+                            background-color: #E9E9E9;
+                          }
+                        </style>
+                      </div>
+                      <div >
+                        <li><a class="dropdown-item" href="#">Notifications  1 <i class="bi bi-alarm-fill"></i></a></li>
+                        <li><a class="dropdown-item" href="#">Notifications 2 <i class="bi bi-alarm-fill"></i></a></li>
+                      </div>
+
                     </ul>
                   </div>
 
