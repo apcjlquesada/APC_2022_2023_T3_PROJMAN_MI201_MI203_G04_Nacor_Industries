@@ -195,68 +195,41 @@
       /* font-weight: 900; */
       font-size: 20px;
     }
-
-    /* edit dashboard contents here */
-    .dash-contents {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      /* text-align: center; */
+    .home-contents .contents .cardssection{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      justify-content: space-between;
     }
-
-    .home-contents .dash-contents .charts {
+    .home-contents .contents .cardssection .card{
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      border: none;
+      margin-bottom: 20px;
+      width: 400px;
+      height: 200px;
       border-radius: 25px;
     }
-
-    .home-contents .dash-contents .grid-stats {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
+    .home-contents .contents .cardssection .card :hover{
+      border-radius: 25px;
+      background-color: #05E0E9;
+      transition: all 0.4s ease;
+    }
+    .home-contents .contents .cardssection .kb-card :hover{
+      border-radius: 25px;
+      background-color: #6644A8;
+      transition: all 0.4s ease;
+    }
+    .home-contents .contents .cardssection .card h5{
+      color: #817E9D;
+      font-weight: 700;
     }
 
+    /* edit dashboard contents here */
     @media (max-width: 1000px) {
-      .dash-contents {
-        grid-template-columns: repeat(1, 1fr);
-      }
-
-      .home-contents .dash-contents .grid-stats {
-        grid-template-columns: repeat(2, 1fr);
-      }
       .home-section {
         min-height: 200vh;
       }
     }
-
-    @media (max-width: 480px) {
-      .home-contents .dash-contents .grid-stats {
-        grid-template-columns: repeat(1, 1fr);
-      }
-      .home-section {
-        min-height: 350vh;
-      }
-    }
-
-    .home-contents .dash-contents .grid-stats .items {
-      border-radius: 25px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-      padding: 21px;
-      margin: 30px;
-      text-align: center;
-      font-weight: 500;
-      font-size: 30px;
-    }
-    .home-contents .dash-contents .KB {
-      color: white;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-      border-radius: 25px;
-      height: 20%;
-      background: #56aeff;
-      margin: 20px;
-      padding: 40px;
-    }
-
   </style>
 
 
@@ -357,48 +330,76 @@
           <div class="dashboard-boxes"></div>
             <div class="title mb-5">
               <h1>Hello, Pogi</h1>
-              <button type="button" class="btn btn-lg" style="border-radius: 25px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">Create Ticket</button>
-
-
+              <button type="button" class="btn btn-lg" style="border-radius: 25px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); background-color: #6644A8">Create Ticket</button>
             </div>
+
+          <div class="contents">
             <!-- carousel -->
-            <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
+            <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel" style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);">
+                  <div class="carousel-inner">
+                      
+                    <div class="carousel-item active" data-bs-interval="3000">
+                      <a href="https://www.facebook.com/asiapacificcollege.edu" target="_blank">
+                        <img src="/resources/CAROUSEL/1.png" class="d-block w-100" alt="...">  
+                      </a>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="3000">
+                      <a href="https://www.apc.edu.ph" target="_blank">
+                        <img src="/resources/CAROUSEL/2.png" class="d-block w-100" alt="...">  
+                      </a>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="3000">
+                      <a href="https://www.facebook.com/asiapacificcollege.edu/posts/pfbid02BrxRBUkodFkfxH2cNiFstY1oQmDUaXdgs9EhtiH8zcJwfFmXWCHfv3ki1ZDWLUKTl" target="_blank">
+                        <img src="/resources/CAROUSEL/3.png" class="d-block w-100" alt="...">
+                          
+                      </a>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="3000" target="_blank">
+                      <a href="https://alumni.apc.edu.ph">
+                        <img src="/resources/CAROUSEL/4.png" class="d-block w-100" alt="...">  
+                      </a>
+                    </div>
                     
-                  <div class="carousel-item active" data-bs-interval="3000">
-                    <a href="your-page-url.html">
-                      <img src="/resources/CAROUSEL/1.png" class="d-block w-100" alt="...">  
-                    </a>
                   </div>
-                  <div class="carousel-item" data-bs-interval="3000">
-                    <a href="your-page-url.html">
-                      <img src="/resources/CAROUSEL/2.png" class="d-block w-100" alt="...">  
-                    </a>
-                  </div>
-                  <div class="carousel-item" data-bs-interval="3000">
-                    <a href="your-page-url.html">
-                      <img src="/resources/CAROUSEL/3.png" class="d-block w-100" alt="...">  
-                    </a>
-                  </div>
-                  <div class="carousel-item" data-bs-interval="3000">
-                    <a href="https://alumni.apc.edu.ph">
-                      <img src="/resources/CAROUSEL/4.png" class="d-block w-100" alt="...">  
-                    </a>
-                  </div>
-                  
+                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                  </button>
+            </div>
+
+            <!-- cards -->
+            <div class="cardssection mt-5">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Blue Screen of Death</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Next</span>
-                </button>
               </div>
-              <div class="sections">
-                    
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Knowledge Based</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
               </div>
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Status Levels</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+              </div>
+              <div class="card kb-card">
+                <div class="card-body">
+                  <h5 class="card-title">Button for KB</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
         </div>
     </section>
     
