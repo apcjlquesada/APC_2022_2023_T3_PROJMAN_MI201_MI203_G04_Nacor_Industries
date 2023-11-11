@@ -332,7 +332,91 @@
                       </div>
                       <div class="tic-id">
                         <h6>Hardware ID: ITRO-P12345</h6>
-                        <h6><a href="url">View Repair History</a></h6>
+                        <h6><a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">View Repair History</a></h6>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                          <div class="modal-dialog modal-dialog-centered modal-xl">
+                            <div class="modal-content" style="max-height: 100vh; overflow-y: auto;">
+                              <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="exampleModalLabel">Edit Device</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                              </div>
+                              <div class="modal-body">
+                                <div class="tix-details" style="display:grid; grid-template-columns: 1fr 1fr;">
+                                  <div class="leftS" style="border-right: 1px solid #000;">
+                                    <div class="mb-2" style="display: flex; align-items: center;">
+                                      <h3 class="me-2">Sent By:</h3>
+                                      <h1>Ruth RMorallos</h1>
+                                    </div>
+                                    <div class="mb-2" style="display: flex; align-items: center;">
+                                      <h2 class="me-2">Device Name: </h2>
+                                      <h2>Dell Optiplex</h2>
+                                    </div>
+                                    
+                                    <div class="mb-2" style="display: flex; align-items: center;">
+                                      <h6 style="margin-right: 10px;">Device Type</h6>
+                                      <select class="form-select w-25" aria-label="Default select example">
+                                        <option selected disabled>Select</option>
+                                        <option value="1">1st Floor</option>
+                                        <option value="2">2nd Floor</option>
+                                        <option value="3">3rd Floor</option>
+                                      </select>
+                                    </div>
+                                    <div style="display: flex; align-items: center;">
+                                      <h6 style="margin-right: 10px;">Designation</h6>
+                                      <select class="form-select w-25" aria-label="Default select example">
+                                        <option selected disabled>Select</option>
+                                        <option value="1">1st Floor</option>
+                                        <option value="2">2nd Floor</option>
+                                        <option value="3">3rd Floor</option>
+                                      </select>
+                                    </div>
+                                    <button type="button" class="btn" style="border-color: #05e0e9;"><i class="bi bi-paperclip"></i></button>
+                                  </div>
+                                  <div class="rightS">
+                                    <div class="status-display" style="overflow-y: auto; max-height: 55vh;">
+                                      <ul style="list-style: none; padding: 10px;">
+                                        <li style="margin: 10px 0; padding: 10px; border-left: 5px solid #6644A8;">
+                                          <h5 style="font-weight: 600; color: #6644a8">Opened</h5>
+                                          <h5>2023-03-21 00:00:00</h5>
+                                          <h5>Assigned To: Val Rodelas</h5>
+                                        </li>
+                                        <li style="margin: 10px 0; padding: 10px; border-left: 5px solid #6644A8;">
+                                          <h5 style="font-weight: 600; color: #6644a8">Opened</h5>
+                                          <h5>2023-03-21 00:00:00</h5>
+                                          <h5>Assigned To: Val Rodelas</h5>
+                                        </li>
+                                        <li style="margin: 10px 0; padding: 10px; border-left: 5px solid #6644A8;">
+                                          <h5 style="font-weight: 600; color: #6644a8">Opened</h5>
+                                          <h5>2023-03-21 00:00:00</h5>
+                                          <h5>Assigned To: Val Rodelas</h5>
+                                        </li>
+                                        <li style="margin: 10px 0; padding: 10px; border-left: 5px solid #6644A8;">
+                                          <h5 style="font-weight: 600; color: #6644a8">Opened</h5>
+                                          <h5>2023-03-21 00:00:00</h5>
+                                          <h5>Assigned To: Val Rodelas</h5>
+                                        </li>
+                                        <li style="margin: 10px 0; padding: 10px; border-left: 5px solid #6644A8;">
+                                          <h5 style="font-weight: 600; color: #6644a8">Opened</h5>
+                                          <h5>2023-03-21 00:00:00</h5>
+                                          <h5>Assigned To: Val Rodelas</h5>
+                                        </li>
+                                      </ul>
+                                    </div>
+                                  </div>
+
+                                  
+                                </div>
+                                
+                              </div>
+                              <div class="modal-footer">
+                                <button type="button" class="btn btn-success">Save changes</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
                       </div>
                     </div>
                     <div class="tic-description p-5">
