@@ -344,7 +344,8 @@
                 <div class="tic-filters me-3">
                   <div class="head pt-3 ps-5 pe-5">
                     Ticket Filter
-                    <i class="bi bi-arrow-repeat"></i>
+                    <i type="button" id="resetButton" class="bi bi-arrow-repeat"></i>
+
                   </div>
                   <hr>
                   <div class="container pt-3 ps-4 dropdiv mt-5">
@@ -355,7 +356,7 @@
                           Recency
                         </div>
                         <div class="col">
-                          <select class="form-select" aria-label="Default select example">
+                          <select id="recencySelect" class="form-select" aria-label="Default select example">
                             <option selected disabled>Open this select menu</option>
                             <option value="1">Daily</option>
                             <option value="2">Weekly</option>
@@ -371,7 +372,7 @@
                           Category
                         </div>
                         <div class="col">
-                          <select class="form-select" aria-label="Default select example">
+                          <select id="categorySelect" class="form-select" aria-label="Default select example">
                             <option selected disabled>Open this select menu</option>
                             <option value="1">Software</option>
                             <option value="2">Infrastructure</option>
@@ -386,7 +387,7 @@
                           Status
                         </div>
                         <div class="col">
-                          <select class="form-select" aria-label="Default select example">
+                          <select id="statusSelect" class="form-select" aria-label="Default select example">
                             <option selected disabled>Open this select menu</option>
                             <option value="1">Pending</option>
                             <option value="2">New</option>
@@ -402,7 +403,7 @@
                           Agent
                         </div>
                         <div class="col">
-                          <select class="form-select" aria-label="Default select example">
+                          <select id="agentSelect" class="form-select" aria-label="Default select example">
                             <option selected disabled>Open this select menu</option>
                             <option value="1">Vincent Nacor</option>
                             <option value="2">Ruth Morallos</option>
@@ -418,7 +419,7 @@
                           Level
                         </div>
                         <div class="col">
-                          <select class="form-select" aria-label="Default select example">
+                          <select id="levelSelect" class="form-select" aria-label="Default select example">
                             <option selected disabled>Open this select menu</option>
                             <option value="1">I</option>
                             <option value="2">II</option>
@@ -427,7 +428,25 @@
                         </div>
                       </div>
                     </div>
+                    <!-- reset button script -->
+                    <script>
+                      document.getElementById('resetButton').addEventListener('click', function() {
+                        // Reset the values of all select elements
+                        resetSelect(document.getElementById('recencySelect'));
+                        resetSelect(document.getElementById('categorySelect'));
+                        resetSelect(document.getElementById('statusSelect'));
+                        resetSelect(document.getElementById('agentSelect'));
+                        resetSelect(document.getElementById('levelSelect'));
+                      });
+                    
+                      function resetSelect(selectElement) {
+                        // Set the first option as selected
+                        selectElement.selectedIndex = 0;
+                      }
+                    </script>
+                    
                   </div>
+
                 </div>
                 <div class="ticket-lists">
                   <div class="lists">

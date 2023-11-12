@@ -187,6 +187,141 @@
         min-height: 150vh;
       }
     }
+
+    .container .title{
+        font-size: 27px;
+        font-weight: bold;
+        position: relative;
+        color: #242934;
+    }
+    /* title highlight */
+    .container .title::before{ 
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 3px;
+        width: 57px;
+        background: linear-gradient(135deg, #6644a8, #05e0e9)
+    }
+    .container .form {
+      margin-top: 30px;
+    }
+    .form .input-box {
+      width: 100%;
+      margin-top: 20px;
+    }
+    .input-box label {
+      color: #333;
+    }
+    .form :where(.input-box input, .select-box) {
+      position: relative;
+      height: 50px;
+      width: 100%;
+      outline: none;
+      font-size: 1rem;
+      color: #817e9d;
+      margin-top: 8px;
+      border: 1px solid #ddd;
+      border-radius: 25px;
+      padding: 0 15px;
+    }
+    .input-box input:focus {
+      box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+    }
+    .form .column {
+      display: flex;
+      column-gap: 15px;
+    }
+    .form .device-type{
+      margin-top: 20px;
+    }
+    /*
+    .device-box h3 {
+      color: #817e9d;
+      font-size: 1rem;
+      font-weight: 400;
+      margin-bottom: 8px;
+    }*/
+    
+    .form :where(.device-option, .device) {
+      display: flex;
+      align-items: center;
+      column-gap: 50px;
+      flex-wrap: wrap;
+      margin-top: 5px;
+    }
+    .form .device {
+      column-gap: 5px;
+    }
+    .device input {
+      accent-color: #817e9d;
+    }
+    .form :where(.device input, .device label) {
+      cursor: pointer;
+    }
+    .device label {
+      color: #707070;
+    }
+    .address :where(input, .select-box) {
+      margin-top: 15px;
+    }
+    .select-box select {
+      height: 100%;
+      width: 100%;
+      outline: none;
+      border: none;
+      color: #707070;
+      font-size: 1rem;
+    }
+    /*buttons*/
+    .form .buttons {
+      display: flex;
+      column-gap: 5px;
+      margin-top: 40px;
+    }
+    .save-btn{
+      height: 55px;
+      width: 50%;
+      color: #fff;
+      font-size: 1rem;
+      font-weight: 400;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      background: #6644a8;
+      right: 0%;
+    }
+    .save-btn:hover {
+      background: #05e0e9;
+    }
+    .cancel-btn{
+      height: 55px;
+      width: 50%;
+      right: 0%;
+      color: #fff;
+      font-size: 1rem;
+      font-weight: 400;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      background: #e2e4e9;
+    }
+    .cancel-btn:hover {
+      background: #817e9d;
+    }
+    /*Responsive*/
+    @media screen and (max-width: 500px) {
+      .form .column {
+        flex-wrap: wrap;
+      }
+      .form :where(.device-option, .device) {
+        row-gap: 20px;
+      }
+    }
+
   </style>
 
   <body>
@@ -345,34 +480,79 @@
                               <div class="modal-body">
                                 <div class="tix-details" style="display:grid; grid-template-columns: 1fr 1fr;">
                                   <div class="leftS" style="border-right: 1px solid #000;">
-                                    <div class="mb-2" style="display: flex; align-items: center;">
-                                      <h3 class="me-2">Sent By:</h3>
-                                      <h1>Ruth RMorallos</h1>
-                                    </div>
-                                    <div class="mb-2" style="display: flex; align-items: center;">
-                                      <h2 class="me-2">Device Name: </h2>
-                                      <h2>Dell Optiplex</h2>
-                                    </div>
-                                    
-                                    <div class="mb-2" style="display: flex; align-items: center;">
-                                      <h6 style="margin-right: 10px;">Device Type</h6>
-                                      <select class="form-select w-25" aria-label="Default select example">
-                                        <option selected disabled>Select</option>
-                                        <option value="1">1st Floor</option>
-                                        <option value="2">2nd Floor</option>
-                                        <option value="3">3rd Floor</option>
-                                      </select>
-                                    </div>
-                                    <div style="display: flex; align-items: center;">
-                                      <h6 style="margin-right: 10px;">Designation</h6>
-                                      <select class="form-select w-25" aria-label="Default select example">
-                                        <option selected disabled>Select</option>
-                                        <option value="1">1st Floor</option>
-                                        <option value="2">2nd Floor</option>
-                                        <option value="3">3rd Floor</option>
-                                      </select>
-                                    </div>
-                                    <button type="button" class="btn" style="border-color: #05e0e9;"><i class="bi bi-paperclip"></i></button>
+                                    <section class="container">
+                                      <div class="title">Edit Device</div>
+                                      <form action="#" class="form">
+                                        <div class="input-box">
+                                          <label>Device ID</label>
+                                          <input type="text" placeholder="ITRO-DEV-ID" required maxlength="15" style="text-transform:uppercase"/> 
+                                        </div>
+                                
+                                        <div class="input-box">
+                                          <label>Device Name</label>
+                                          <input type="text" placeholder="Enter Device Name" required />
+                                        </div>
+                                
+                                        <div class="column">
+                                          <div class="input-box">
+                                            <label>Inventory Number</label>
+                                            <input type="number" placeholder="Enter Inventory number" required />
+                                          </div>
+                                          <div class="input-box">
+                                            <label>Purchase Date</label>
+                                            <input type="date" placeholder="Enter purchase date" required />
+                                          </div>
+                                        </div>
+                                        <div class="device-type">
+                                          <label>Device Type</label>
+                                          <div class="device-option">
+                                            <div class="device">
+                                              <input type="radio" id="check-computing" name="device" checked />
+                                              <label for="check-computing">Computing</label>
+                                            </div>
+                                            <div class="device">
+                                              <input type="radio" id="check-networking" name="device" />
+                                              <label for="check-networking">Networking</label>
+                                            </div>
+                                            <div class="device">
+                                              <input type="radio" id="check-av" name="device" />
+                                              <label for="check-av">Audio/Visual</label>
+                                            </div>
+                                            <div class="device">
+                                              <input type="radio" id="check-utilities" name="device" />
+                                              <label for="check-utilities">Utility</label>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="input-box designation">
+                                          <label>Device Assignment</label>
+                                          <div class="column">
+                                            <div class="select-box">
+                                              <select>
+                                                <option hidden>Floor</option>
+                                                <option>1st floor</option>
+                                                <option>2nd floor</option>
+                                                <option>3rd floor</option>
+                                                <option>4th floor</option>
+                                                <option>5th floor</option>
+                                                <option>6th floor</option>
+                                                <option>7th floor</option>
+                                                <option>8th floor</option>
+                                                <option>9th floor</option>
+                                                <option>10th floor</option>
+                                                <option>11th floor</option>
+                                                <option>12th floor</option>
+                                              </select>
+                                            </div>
+                                            <input type="number" placeholder="Room Number" required />
+                                          </div>
+                                        </div>
+                                            <div class="buttons">
+                                                <button class="button cancel-btn">Cancel</button>
+                                                <button class="button save-btn">Save Changes</button>
+                                            </div>
+                                      </form>
+                                    </section>
                                   </div>
                                   <div class="rightS">
                                     <div class="status-display" style="overflow-y: auto; max-height: 55vh;">

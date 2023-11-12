@@ -334,7 +334,7 @@
                 <div class="device-filters me-3">
                   <div class="head pt-3 ps-5 pe-5">
                     Device Filters
-                    <i class="bi bi-arrow-repeat"></i>
+                    <i id="resetButton" type="button" class="bi bi-arrow-repeat"></i>
                   </div>
                   <hr>
                   <div class="cont pt-3 dropdowns">
@@ -345,7 +345,7 @@
                           Device Type
                         </div>
                         <div class="col">
-                          <select class="form-select" aria-label="Default select example">
+                          <select id="deviceTypeSelect" class="form-select" aria-label="Default select example">
                             <option selected>Open this select menu</option>
                             <option value="1">One</option>
                             <option value="2">Two</option>
@@ -361,7 +361,7 @@
                           Assignment
                         </div>
                         <div class="col">
-                          <select class="form-select" aria-label="Default select example">
+                          <select id="assignmentSelect" class="form-select" aria-label="Default select example">
                             <option selected>Open this select menu</option>
                             <option value="1">One</option>
                             <option value="2">Two</option>
@@ -377,7 +377,7 @@
                           Recency
                         </div>
                         <div class="col">
-                          <select class="form-select" aria-label="Default select example">
+                          <select id="recencySelect" class="form-select" aria-label="Default select example">
                             <option selected>Open this select menu</option>
                             <option value="1">One</option>
                             <option value="2">Two</option>
@@ -386,9 +386,23 @@
                         </div>
                       </div>
                     </div>
+                    <script>
+                      document.getElementById('resetButton').addEventListener('click', function() {
+                        // Reset the values of all select elements
+                        resetSelect(document.getElementById('deviceTypeSelect'));
+                        resetSelect(document.getElementById('assignmentSelect'));
+                        resetSelect(document.getElementById('recencySelect'));
+                      });
+                    
+                      function resetSelect(selectElement) {
+                        // Set the first option as selected
+                        selectElement.selectedIndex = 0;
+                      }
+                    </script>
+                    
                   </div>
                 </div>
-                <div class="device-lists">
+                <div class="device-lists"> <!-- data table list -->
                   <div class="lists">
                     <table id="example" class="hover" style="width: 100%">
                       <thead>
