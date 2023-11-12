@@ -188,12 +188,6 @@
       }
     }
 
-    .container .title{
-        font-size: 27px;
-        font-weight: bold;
-        position: relative;
-        color: #242934;
-    }
     /* title highlight */
     .container .title::before{ 
         content: '';
@@ -236,13 +230,6 @@
     .form .device-type{
       margin-top: 20px;
     }
-    /*
-    .device-box h3 {
-      color: #817e9d;
-      font-size: 1rem;
-      font-weight: 400;
-      margin-bottom: 8px;
-    }*/
     
     .form :where(.device-option, .device) {
       display: flex;
@@ -273,44 +260,6 @@
       border: none;
       color: #707070;
       font-size: 1rem;
-    }
-    /*buttons*/
-    .form .buttons {
-      display: flex;
-      column-gap: 5px;
-      margin-top: 40px;
-    }
-    .save-btn{
-      height: 55px;
-      width: 50%;
-      color: #fff;
-      font-size: 1rem;
-      font-weight: 400;
-      border: none;
-      border-radius: 25px;
-      cursor: pointer;
-      transition: all 0.2s ease;
-      background: #6644a8;
-      right: 0%;
-    }
-    .save-btn:hover {
-      background: #05e0e9;
-    }
-    .cancel-btn{
-      height: 55px;
-      width: 50%;
-      right: 0%;
-      color: #fff;
-      font-size: 1rem;
-      font-weight: 400;
-      border: none;
-      border-radius: 25px;
-      cursor: pointer;
-      transition: all 0.2s ease;
-      background: #e2e4e9;
-    }
-    .cancel-btn:hover {
-      background: #817e9d;
     }
     /*Responsive*/
     @media screen and (max-width: 500px) {
@@ -481,7 +430,6 @@
                                 <div class="tix-details" style="display:grid; grid-template-columns: 1fr 1fr;">
                                   <div class="leftS" style="border-right: 1px solid #000;">
                                     <section class="container">
-                                      <div class="title">Edit Device</div>
                                       <form action="#" class="form">
                                         <div class="input-box">
                                           <label>Device ID</label>
@@ -547,10 +495,6 @@
                                             <input type="number" placeholder="Room Number" required />
                                           </div>
                                         </div>
-                                            <div class="buttons">
-                                                <button class="button cancel-btn">Cancel</button>
-                                                <button class="button save-btn">Save Changes</button>
-                                            </div>
                                       </form>
                                     </section>
                                   </div>
