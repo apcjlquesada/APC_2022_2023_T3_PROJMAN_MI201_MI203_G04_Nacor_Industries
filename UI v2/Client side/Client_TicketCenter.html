@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ticket Center | Ram's Corner</title>
+    <!-- <link rel="stylesheet" href="ticketcenter.css"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <!-- data tables -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+    <!-- bootstrap link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+  </head>
+
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      width: 100%;
+    }
+
+    .sidebar {
+      position: fixed;
+      height: 100%;
+      width: 100px;
+      background: #ffffff;
+      transition: all 0.4s ease;
+      -moz-box-shadow: -3px 0 5px 0 #555;
+      -webkit-box-shadow: -3px 0 5px 0 #555;
+      box-shadow: -3px 0 5px 0 #555;
+      /* box-shadow: 0 0 10px rgba(0, 0, 0, 1); */
+    }
+
+    .sidebar.active {
+      width: 300px;
+    }
+
+    .sidebar .logo-details {
+      margin-bottom: 5vh;
+      /* align-items: center; */
+    }
+    .sidebar .logo-details .profile img {
+      width: 40px;
+      height: 40px;
+      margin-top: 20px;
+    }
+
+    .sidebar.active .logo-details .profile img {
+      width: 80px;
+      height: 80px;
+      margin-top: 20px;
+    }
+
+    .sidebar .logo-details .profile p {
+      display: none;
+    }
+
+    .sidebar.active .logo-details .profile p {
+      display: block;
+      margin-top: 2vh;
+    }
+
+    .sidebar .nav-links li {
+      height: 15vh;
+      width: 100%;
+      list-style: none;
+    }
+
+    .sidebar .nav-links li a {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      transition: all 0.4s ease;
+      border-radius: 50px;
+      justify-content: center;
+    }
+    .sidebar.sidebar.active .nav-links li a {
+      justify-content: start;
+      transition: all 0.4s ease;
+    }
+
+    .sidebar .nav-links li a:hover {
+      background: #05e0e9;
+      width: 100%;
+    }
+
+    .sidebar .nav-links li a i {
+      min-width: 60px;
+      text-align: center;
+      color: #2e266d;
+      font-size: 30px;
+    }
+
+    .sidebar .nav-links li a .link_name {
+      color: #2e266d;
+      font-size: 20px;
+      font-weight: 400;
+      display: none;
+      transition: all 0.4s ease;
+    }
+    .sidebar.sidebar.active .nav-links li a .link_name {
+      display: contents;
+      transition: all 0.4s ease;
+    }
+    .sidebar .grp-name {
+      margin-left: 60px;
+      position: absolute;
+      align-items: center;
+      bottom: -15px;
+      width: 100%;
+      transition: all 0.5ms ease;
+    }
+
+    /* dashboard */
+    .home-section {
+      /* z-index: 2; */
+      background: #f6f7fb;
+      position: relative;
+      min-height: 100vh;
+      width: calc(100% - 100px);
+      left: 100px;
+      transition: all 0.4s ease;
+    }
+
+    .sidebar.active ~ .home-section {
+      width: calc(100% - 300px);
+      left: 300px;
+    }
+    .home-section nav {
+      height: 80px;
+      border-bottom: 2px solid #ffffff;
+      padding: 0 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .home-section nav .sidebar-button {
+      display: flex;
+      align-items: center;
+      font-size: 24px;
+      font-weight: 500;
+    }
+
+    .home-section nav .sidebar-button i {
+      font-size: 30px;
+      margin-right: 10px;
+    }
+
+    .home-section nav .profile-details {
+      display: flex;
+      align-items: center;
+      height: 50px;
+      font-size: 30px;
+    }
+
+    .home-section nav .profile-details i {
+      margin: 15px;
+    }
+
+    .home-contents {
+      margin: 30px;
+      /* border: #05e0e9 1px solid; */
+    }
+
+    .home-contents .title {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .home-contents .title h1 {
+      font-weight: 700;
+    }
+    .home-contents .title i {
+      font-weight: 900;
+      font-size: 30px;
+    }
+
+    /* edit dashboard contents here */
+
+    .dash-contents .dash-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    .dash-contents .dash-container .tic-filters {
+      /* margin: 10px; */
+      font-size: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      border-radius: 25px;
+      max-height: 80vh;
+    }
+    .dash-contents .dash-container .tic-filters .dropdiv .container .titlename{
+      color: #817E9D;
+      font-weight: 500;
+    }
+    .dash-contents .dash-container .tic-filters .dropdiv .container select{
+      /* box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2); */
+      border-radius: 25px;
+      background-color: #E9E9E9;
+      color: #817E9D;
+      
+    }
+    .dash-contents .dash-container .tic-filters .head {
+      display: flex;
+      justify-content: space-between;
+      font-size: 30px;
+      font-weight: 700;
+      color: #817E9D;
+    }
+    .dash-contents .dash-container .ticket-lists {
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      border-radius: 25px;
+      max-height: 605vh;
+      grid-column: span 3;
+    }
+    .dash-contents .dash-container .ticket-lists .lists {
+      margin: 10px;
+      overflow-y: auto;
+      max-height: 70vh;
+    }
+
+    @media (max-width: 1000px) {
+      .dash-contents .dash-container {
+        grid-template-columns: repeat(1, 1fr);
+      }
+      .home-section {
+        min-height: 150vh;
+      }
+      .dash-contents .dash-container .tic-filters {
+        margin-bottom: 1rem;
+      }
+    }
+
+  </style>
+
+  <body>
+    <!-- sidebar -->
+    <div class="sidebar">
+        <div class="logo-details">
+          <center class="profile">
+            <img src="/images/3.png" alt="">
+            <!-- <p>Nacor Industries</p> -->
+          </center>
+        </div>
+        <ul class="nav-links" style="padding: 0;">
+          <li>
+            <a href="Client_dashboard.html">
+              <i class="bi bi-columns-gap"></i>
+              <span class="link_name">Dashboard</span>
+            </a>
+          </li>
+          <li>
+            <a href="Client_TicketCenter.html">
+              <i class="bi bi-ticket-perforated"></i>
+              <span class="link_name">Tickets</span>
+            </a>
+          </li>
+          <li>
+            <a href="Client_KB.html">
+              <i class="bi bi-lightbulb"></i>
+              <span class="link_name">Knowledge Base</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="bi bi-tags"></i>
+              <span class="link_name">Tags</span>
+            </a>
+          </li>
+          <li>
+            <a href="device-list.html">
+              <i class="bi bi-question-circle"></i>
+              <span class="link_name">Help</span>
+            </a>
+          </li>
+        </ul>
+    </div>
+
+    <!-- header/contents -->
+    <section class="home-section">
+        <nav>
+            <div class="sidebar-button">
+                <i class="bi bi-list sidebarBtn"></i>
+                <!-- <span class="dashboard">Rams Corner</span> -->
+            </div>
+            <div class="profile-details">
+              
+                  <div class="dropdown1">
+                    <i class="bi bi-bell-fill" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
+                    <ul class="dropdown-menu">
+                      <li><span class="dropdown-item-text">Notifications</span></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="#">Notifications  1</a></li>
+                      <li><a class="dropdown-item" href="#">Notifications 2</a></li>
+                    </ul>
+                  </div>
+
+                  <div class="dropdown2">
+                    <i class="bi bi-person-fill" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
+                    
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Sign out</a></li>
+                      </ul>
+                    </div>
+            </div>
+        </nav>
+
+        <div class="home-contents">
+          <!-- <div class="dashboard-boxes"></div> -->
+            <div class="title mb-5">
+                <h1>Ticket Center</h1>
+                <div style="display: grid; grid-template-columns: 1fr 1fr">
+                    <select class="form-select" aria-label="Default select example" style="border-radius: 25px;">
+                      <option selected disabled>View My Ticket</option>
+                      <option value="2">Sent Tickets</option>
+                      <option value="3">Tagged Tickets</option>
+                    </select>
+    
+                    <i id="sortButton" type="button" class="bi bi-arrows-expand ms-5"></i>
+                  </div>
+
+            </div>
+
+            <div class="dash-contents">
+              <div class="dash-container">
+                <div class="tic-filters me-3">
+                  <div class="head pt-3 ps-5 pe-5">
+                    Ticket Filter
+                    <i type="button" id="resetButton" class="bi bi-arrow-repeat"></i>
+
+                  </div>
+                  <hr>
+                  <div class="container pt-3 ps-4 dropdiv mt-5">
+                    <!-- regency -->
+                    <div class="container pb-5 mb-3">
+                      <div class="row">
+                        <div class="col titlename">
+                          Recency
+                        </div>
+                        <div class="col">
+                          <select id="recencySelect" class="form-select" aria-label="Default select example">
+                            <option selected disabled>Open this select menu</option>
+                            <option value="1">Daily</option>
+                            <option value="2">Weekly</option>
+                            <option value="3">Monthly</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Catgeory -->
+                    <div class="container pb-5 mb-3">
+                      <div class="row">
+                        <div class="col titlename">
+                          Category
+                        </div>
+                        <div class="col">
+                          <select id="categorySelect" class="form-select" aria-label="Default select example">
+                            <option selected disabled>Open this select menu</option>
+                            <option value="1">Software</option>
+                            <option value="2">Infrastructure</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Status -->
+                    <div class="container pb-5 mb-3">
+                      <div class="row">
+                        <div class="col titlename">
+                          Status
+                        </div>
+                        <div class="col">
+                          <select id="statusSelect" class="form-select" aria-label="Default select example">
+                            <option selected disabled>Open this select menu</option>
+                            <option value="1">Pending</option>
+                            <option value="2">New</option>
+                            <option value="3">CLosed</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- reset button script -->
+                    <script>
+                      document.getElementById('resetButton').addEventListener('click', function() {
+                        // Reset the values of all select elements
+                        resetSelect(document.getElementById('recencySelect'));
+                        resetSelect(document.getElementById('categorySelect'));
+                        resetSelect(document.getElementById('statusSelect'));
+                      });
+                    
+                      function resetSelect(selectElement) {
+                        // Set the first option as selected
+                        selectElement.selectedIndex = 0;
+                      }
+                    </script>
+                    
+                  </div>
+
+                </div>
+                <div class="ticket-lists">
+                  <div class="lists">
+                    <table id="example" class="hover" style="width: 100%">
+                      <thead>
+                        <tr>
+                          <th>ID</th>
+                          <th>Subject</th>
+                          <th>Requested</th>
+                          <th>Due</th>
+                          <th><i class="bi bi-exclamation-circle"></i></th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>33</td>
+                          <td>System Architect</td>
+                          <td>Edinburgh</td>
+                          <td>12-21-23</td>
+                          <td><i class="bi bi-patch-exclamation-fill"></i></td>
+                        </tr>
+                        <tr>
+                          <td>49</td>
+                          <td>Accountant</td>
+                          <td>Antih</td>
+                          <td>2011-07-25</td>
+                          <td><i class="bi bi-patch-exclamation"></i></td>
+                        </tr>
+                        <tr>
+                          <td>33</td>
+                          <td>System Architect</td>
+                          <td>Edinburgh</td>
+                          <td>12-21-23</td>
+                          <td><i class="bi bi-patch-exclamation-fill"></i></td>
+                        </tr>
+                        <tr>
+                          <td>49</td>
+                          <td>Accountant</td>
+                          <td>Antih</td>
+                          <td>2011-07-25</td>
+                          <td><i class="bi bi-patch-exclamation"></i></td>
+                        </tr>
+                        <tr>
+                          <td>33</td>
+                          <td>System Architect</td>
+                          <td>Edinburgh</td>
+                          <td>12-21-23</td>
+                          <td><i class="bi bi-patch-exclamation-fill"></i></td>
+                        </tr>
+                        <tr>
+                          <td>49</td>
+                          <td>Accountant</td>
+                          <td>Antih</td>
+                          <td>2011-07-25</td>
+                          <td><i class="bi bi-patch-exclamation"></i></td>
+                        </tr>
+                        <tr>
+                          <td>33</td>
+                          <td>System Architect</td>
+                          <td>Edinburgh</td>
+                          <td>12-21-23</td>
+                          <td><i class="bi bi-patch-exclamation-fill"></i></td>
+                        </tr>
+                        <tr>
+                          <td>49</td>
+                          <td>Accountant</td>
+                          <td>Antih</td>
+                          <td>2011-07-25</td>
+                          <td><i class="bi bi-patch-exclamation"></i></td>
+                        </tr>
+                      </tbody>
+                      <tfoot>
+                        <tr>
+                          <th>ID</th>
+                          <th>Subject</th>
+                          <th>Requested</th>
+                          <th>Due</th>
+                          <th><i class="bi bi-exclamation-circle"></i></th>
+                        </tr>
+                      </tfoot>
+                    </table>
+                    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+                    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+                    <script>
+                      $(document).ready(function(){
+                        var table = $('#example').DataTable();
+                    
+                        // Add event listener for sorting button
+                        $('#sortButton').on('click', function(){
+                          // Toggle between ascending and descending order on each click
+                          table.order(table.order()[0][0], table.order()[0][1] === 'asc' ? 'desc' : 'asc').draw();
+                        });
+                      });
+                    </script>
+                  </div>
+                  <footer>
+                    <hr>
+                    <div class="card-footer text-body-secondary" style="display: flex; justify-content: end;">
+                      <button type="button" class="btn btn-primary btn-lg me-5 m-3 mt-1" style="border-radius: 25px;">Create Ticket</button>
+                    </div>
+                  </footer>
+                </div>
+              </div>
+            </div>
+        </div>
+
+    </section>
+    
+
+    <!-- sidebar button script -->
+    <script>
+        let sidebar = document.querySelector(".sidebar");
+        let sidebarBtn = document.querySelector(".sidebarBtn");
+
+        sidebarBtn.onclick = function() {
+            sidebar.classList.toggle("active");
+        }
+    </script>
+
+  </body>
+
+  <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script> -->
+  <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script> -->
+  </html>
